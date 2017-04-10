@@ -37,7 +37,6 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 
 html {
 	font-family: sans-serif;
-	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -403,9 +402,9 @@ textarea {
 	color: #333;
 	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
 	font-size: 15px;
-	font-size: 0.9375rem;
+	font-size: 0.875rem;
 	font-weight: 400;
-	line-height: 1.66;
+	line-height: 1.85;
 }
 
 h1,
@@ -3071,15 +3070,6 @@ object {
 
 	/* Typography */
 
-	body,
-	button,
-	input,
-	select,
-	textarea {
-		font-size: 18px;
-		font-size: 1.125rem;
-	}
-
 	h1 {
 		font-size: 30px;
 		font-size: 1.875rem;
@@ -3194,16 +3184,6 @@ object {
 @media screen and (min-width: 48em) {
 
 	/* Typography */
-
-	body,
-	button,
-	input,
-	select,
-	textarea {
-		font-size: 16px;
-		font-size: 1rem;
-		line-height: 1.5;
-	}
 
 	.entry-content blockquote.alignleft,
 	.entry-content blockquote.alignright {
