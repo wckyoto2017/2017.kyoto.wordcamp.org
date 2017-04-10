@@ -1637,6 +1637,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	right: 0;
 	top: 0;
 	width: 100%;
+	text-align: center;
 }
 
 .custom-header-media:before {
@@ -1656,9 +1657,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	height: auto;
 	left: 50%;
 	max-width: 1000%;
-	min-height: 100%;
 	top: 50%;
-	padding-bottom: 1px; /* Prevent header from extending beyond the footer */
 	-ms-transform: translateX(-50%) translateY(-50%);
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-webkit-transform: translateX(-50%) translateY(-50%);
@@ -1707,7 +1706,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	.has-header-video .custom-header-media video,
 	.has-header-video .custom-header-media iframe,
 	.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
-		height: 100%;
 		left: 0;
 		-o-object-fit: cover;
 		object-fit: cover;
