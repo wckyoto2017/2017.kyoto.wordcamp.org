@@ -121,7 +121,7 @@ dfn {
 
 mark {
 	background-color: #eee;
-	color: #222;
+	color: #c00;
 }
 
 small {
@@ -812,7 +812,8 @@ html[lang="ja"] button,
 html[lang="ja"] input,
 html[lang="ja"] select,
 html[lang="ja"] textarea {
-	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+	font-family: 'Open Sans', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-feature-settings : "palt" 1;
 }
 
 html[lang="ja"] h1,
@@ -945,7 +946,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #222;
+	color: #c00;
 	border-color: #333;
 }
 
@@ -970,7 +971,7 @@ input[type="checkbox"] + label {
 button,
 input[type="button"],
 input[type="submit"] {
-	background-color: #222;
+	background-color: #c00;
 	border: 0;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -1001,7 +1002,7 @@ input[type="button"].secondary,
 input[type="reset"].secondary,
 input[type="submit"].secondary {
 	background-color: #ddd;
-	color: #222;
+	color: #c00;
 }
 
 button:hover,
@@ -1135,7 +1136,7 @@ td:last-child {
 --------------------------------------------------------------*/
 
 a {
-	color: #222;
+	color: #c00;
 	text-decoration: none;
 }
 
@@ -1258,7 +1259,7 @@ a:hover .nav-title,
 
 .post-navigation a:focus .icon,
 .post-navigation a:hover .icon {
-	color: #222;
+	color: #c00;
 }
 
 /*--------------------------------------------------------------
@@ -1288,9 +1289,11 @@ a:hover .nav-title,
 	background: #fcfcfc;
 	border-bottom: 1px solid #eee;
 	border-top: 1px solid #eee;
+	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	position: relative;
+	text-transform: uppercase;
 }
 
 .navigation-top .wrap {
@@ -1299,10 +1302,7 @@ a:hover .nav-title,
 }
 
 .navigation-top a {
-	color: #222;
-	font-weight: 600;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
+	color: #333;
 }
 
 .navigation-top .current-menu-item > a,
@@ -1385,7 +1385,7 @@ a:hover .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #222;
+	color: #c00;
 	display: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1438,7 +1438,7 @@ a:hover .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #222;
+	color: #c00;
 	display: block;
 	font-size: 16px;
 	right: -0.5em;
@@ -1558,7 +1558,7 @@ body {
 
 .site-title,
 .site-title a {
-	color: #222;
+	color: #c00;
 	opacity: 1; /* Prevent opacity from changing during selective refreshes in the customize preview */
 }
 
@@ -1785,7 +1785,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 .twentyseventeen-panel .recent-posts .entry-header .edit-link {
-	color: #222;
+	color: #c00;
 	display: inline-block;
 	font-size: 11px;
 	font-size: 0.6875rem;
@@ -1830,7 +1830,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .page .panel-content .entry-title,
 .page-title,
 body.page:not(.twentyseventeen-front-page) .entry-title {
-	color: #222;
+	color: #c00;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 800;
@@ -1984,7 +1984,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .blog .entry-meta a.post-edit-link,
 .archive .entry-meta a.post-edit-link,
 .search .entry-meta a.post-edit-link {
-	color: #222;
+	color: #c00;
 	display: inline-block;
 	margin-left: 1em;
 	white-space: nowrap;
@@ -2047,7 +2047,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .page-links a .page-number {
-	color: #222;
+	color: #c00;
 }
 
 /* Entry footer */
@@ -2094,7 +2094,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .entry-footer .edit-link a.post-edit-link {
-	background-color: #222;
+	background-color: #c00;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	-webkit-box-shadow: none;
@@ -2373,7 +2373,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .comment-metadata a.comment-edit-link {
-	color: #222;
+	color: #c00;
 	margin-left: 1em;
 }
 
@@ -2390,7 +2390,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .comment-reply-link .icon {
-	color: #222;
+	color: #c00;
 	left: -2em;
 	height: 1em;
 	position: absolute;
@@ -2438,7 +2438,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 h2.widget-title {
-	color: #222;
+	color: #c00;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: 800;
@@ -2750,7 +2750,7 @@ object {
 
 .site-content .wp-playlist-light {
 	border-color: #eee;
-	color: #222;
+	color: #c00;
 }
 
 .site-content .wp-playlist-light .wp-playlist-current-item .wp-playlist-item-album {
@@ -2817,13 +2817,13 @@ object {
 .site-content .wp-playlist-dark .wp-playlist-item:focus {
 	border-bottom-color: rgba(0, 0, 0, 0);
 	background-color: #aaa;
-	color: #222;
+	color: #c00;
 }
 
 .site-content .wp-playlist-dark a.wp-playlist-caption:hover,
 .site-content .wp-playlist-dark .wp-playlist-item:hover a,
 .site-content .wp-playlist-dark .wp-playlist-item:focus a {
-	color: #222;
+	color: #c00;
 }
 
 /* Playlist Style Overrides */
@@ -3035,7 +3035,7 @@ object {
 
 .no-svg .social-navigation a {
 	background: transparent;
-	color: #222;
+	color: #c00;
 	height: auto;
 	width: auto;
 }
