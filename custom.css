@@ -1530,10 +1530,7 @@ body {
 /* Site branding */
 
 .site-branding {
-	padding: 1em 0;
 	position: relative;
-	-webkit-transition: margin-bottom 0.2s;
-	transition: margin-bottom 0.2s;
 	z-index: 3;
 }
 
@@ -3136,10 +3133,6 @@ object {
 
 	/* Site Branding */
 
-	.site-branding {
-		padding: 3em 0;
-	}
-
 	/* Front Page */
 
 	.panel-content .wrap {
@@ -3246,10 +3239,6 @@ object {
 
 	/* Site Branding */
 
-	.site-branding {
-		margin-bottom: 0;
-	}
-
 	.has-header-image.twentyseventeen-front-page .site-branding,
 	.has-header-video.twentyseventeen-front-page .site-branding,
 	.has-header-image.home.blog .site-branding,
@@ -3258,8 +3247,6 @@ object {
 		display: block;
 		left: 0;
 		height: auto;
-		padding-top: 0;
-		position: absolute;
 		width: 100%;
 	}
 
@@ -3563,13 +3550,6 @@ object {
 	}
 
 	/* Front Page */
-
-	.twentyseventeen-front-page.has-header-image .site-branding,
-	.twentyseventeen-front-page.has-header-video .site-branding,
-	.home.blog.has-header-image .site-branding,
-	.home.blog.has-header-video .site-branding {
-		margin-bottom: 70px;
-	}
 
 	.twentyseventeen-front-page.has-header-image .custom-header-media,
 	.twentyseventeen-front-page.has-header-video .custom-header-media,
