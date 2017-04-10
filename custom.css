@@ -1639,17 +1639,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	width: 100%;
 }
 
-.custom-header-media:before {
-	bottom: 0;
-	content: "";
-	display: block;
-	height: 100%;
-	left: 0;
-	position: absolute;
-	right: 0;
-	z-index: 2;
-}
-
 .has-header-image .custom-header-media img,
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
@@ -3592,13 +3581,6 @@ object {
 		height: 100vh;
 		max-height: 100%;
 		overflow: hidden;
-	}
-
-	.twentyseventeen-front-page.has-header-image .custom-header-media:before,
-	.twentyseventeen-front-page.has-header-video .custom-header-media:before,
-	.home.blog.has-header-image .custom-header-media:before,
-	.home.blog.has-header-video .custom-header-media:before {
-		height: 33%;
 	}
 
 	.admin-bar.twentyseventeen-front-page.has-header-image .custom-header-media,
