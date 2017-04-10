@@ -1653,7 +1653,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 .has-header-image .custom-header-media img,
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
-	position: fixed;
 	height: auto;
 	left: 50%;
 	max-width: 1000%;
