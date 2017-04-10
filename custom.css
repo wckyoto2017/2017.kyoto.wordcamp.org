@@ -1637,7 +1637,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	right: 0;
 	top: 0;
 	width: 100%;
-	text-align: center;
 }
 
 .custom-header-media:before {
@@ -1654,14 +1653,18 @@ body:not(.title-tagline-hidden) .site-branding-text {
 .has-header-image .custom-header-media img,
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
+	position: relative;
 	height: auto;
 	left: 50%;
 	max-width: 1000%;
-	top: 50%;
-	-ms-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.wp-custom-header {
+	padding: 50px;
 }
 
 .wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
@@ -1698,23 +1701,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	-moz-transform: translateX(-50%) translateY(0);
 	-webkit-transform: translateX(-50%) translateY(0);
 	transform: translateX(-50%) translateY(0);
-}
-
-/* For browsers that support 'object-fit' */
-@supports ( object-fit: cover ) {
-	.has-header-image .custom-header-media img,
-	.has-header-video .custom-header-media video,
-	.has-header-video .custom-header-media iframe,
-	.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
-		left: 0;
-		-o-object-fit: cover;
-		object-fit: cover;
-		top: 0;
-		-ms-transform: none;
-		-moz-transform: none;
-		-webkit-transform: none;
-		transform: none;
-	}
 }
 
 /* Hides div in Customizer preview when header images or videos change. */
