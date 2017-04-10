@@ -3272,7 +3272,6 @@ object {
 	}
 
 	.custom-header-media {
-		height: 165px;
 		position: relative;
 	}
 
@@ -3280,7 +3279,6 @@ object {
 	.twentyseventeen-front-page.has-header-video .custom-header-media,
 	.home.blog.has-header-image .custom-header-media,
 	.home.blog.has-header-video .custom-header-media {
-		height: 0;
 		position: relative;
 	}
 
@@ -3577,9 +3575,6 @@ object {
 	.twentyseventeen-front-page.has-header-video .custom-header-media,
 	.home.blog.has-header-image .custom-header-media,
 	.home.blog.has-header-video .custom-header-media {
-		height: 1200px;
-		height: 100vh;
-		max-height: 100%;
 		overflow: hidden;
 	}
 
