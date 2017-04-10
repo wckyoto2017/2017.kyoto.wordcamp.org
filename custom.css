@@ -1829,11 +1829,15 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .page .panel-content .entry-title,
 .page-title,
 body.page:not(.twentyseventeen-front-page) .entry-title {
-	color: #c00;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 800;
+	border-top: 2px solid #333;
+	border-bottom: 1px solid #333;
+	color: #333;
+	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 32px;
+	font-size: 2rem;
+	font-weight: normal;
 	letter-spacing: 0.14em;
+	padding: 0.5em 0;
 	text-transform: uppercase;
 }
 
