@@ -1301,7 +1301,7 @@ a:hover .nav-title,
 .navigation-top .current-menu-item > a,
 .navigation-top .current_page_item > a {
 	background: #333;
-	color: #fefefe;
+	color: #fcfcfc;
 }
 
 .main-navigation {
@@ -1310,7 +1310,7 @@ a:hover .nav-title,
 }
 
 .main-navigation ul {
-	background: #fefefe;
+	background: #fcfcfc;
 	list-style: none;
 	margin: 0;
 	padding: 0 1.5em;
@@ -1370,7 +1370,7 @@ a:hover .nav-title,
 
 .main-navigation a:hover {
 	background: #666;
-	color: #fefefe;
+	color: #fcfcfc;
 }
 
 /* Menu toggle */
@@ -1486,7 +1486,7 @@ html {
 }
 
 body {
-	background-color: #fefefe;
+	background-color: #fcfcfc;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -3274,7 +3274,7 @@ object {
 	/* Navigation */
 
 	.navigation-top {
-		background: #fefefe;
+		background: #fcfcfc;
 		bottom: auto;
 		font-size: 14px;
 		font-size: 0.875rem;
@@ -3423,7 +3423,7 @@ object {
 	.main-navigation li li.current-menu-item a:hover,
 	.main-navigation li li.current_page_item a:focus,
 	.main-navigation li li.current-menu-item a:focus {
-		color: #fefefe;
+		color: #fcfcfc;
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -3489,7 +3489,7 @@ object {
 	}
 
 	.site-header .menu-scroll-down {
-		color: #fefefe;
+		color: #fcfcfc;
 		top: 2em;
 	}
 
@@ -3500,7 +3500,7 @@ object {
 	}
 
 	.site-header .navigation-top .menu-scroll-down:hover {
-		color: #fefefe;
+		color: #fcfcfc;
 	}
 
 	.menu-scroll-down:focus {
