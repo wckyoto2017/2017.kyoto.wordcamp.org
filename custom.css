@@ -1293,7 +1293,9 @@ a:hover .nav-title,
 }
 
 .navigation-top .wrap {
-	max-width: 1400px;
+	border-left: 2px solid #333;
+	border-right: 2px solid #333;
+	max-width: 960px;
 	padding: 0;
 }
 
@@ -1368,6 +1370,7 @@ a:hover .nav-title,
 	display: block;
 	padding: 0.5em 0;
 	text-decoration: none;
+	transition: padding 0.1s linear;
 }
 
 .main-navigation a:hover {
@@ -1526,6 +1529,7 @@ body {
 /* Site branding */
 
 .site-branding {
+	margin-bottom: 0 !important;
 	position: relative;
 	z-index: 3;
 }
@@ -1646,7 +1650,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 }
 
 .wp-custom-header {
-	padding: 50px;
+	padding: 100px 50px 50px;
 }
 
 .wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
@@ -3272,15 +3276,16 @@ object {
 	/* Navigation */
 
 	.navigation-top {
-		bottom: 0;
+		background: #fcfcfc;
+		border-bottom: 2px solid #333;
+		bottom: auto;
 		font-size: 14px;
 		font-size: 0.875rem;
 		left: 0;
-		margin: auto;
-		position: absolute;
+		position: fixed;
 		right: 0;
-		width: 1400px;
-		z-index: 3;
+		top: 0;
+		z-index: 7;
 	}
 
 	.navigation-top nav {
@@ -3295,6 +3300,11 @@ object {
 		top: 0;
 		width: 100%;
 		z-index: 7;
+	}
+
+	.site-navigation-fixed.navigation-top .main-navigation a {
+		padding-top: 0.75em;
+		padding-bottom: 0.75em;
 	}
 
 	.admin-bar .site-navigation-fixed.navigation-top {
@@ -3319,7 +3329,6 @@ object {
 	}
 
 	.js .main-navigation > div > .menu {
-		border: 2px solid #333;
 		display: flex;
 		flex-flow: row wrap;
 	}
@@ -3346,7 +3355,7 @@ object {
 	}
 
 	.main-navigation a {
-		padding: 1.75em 1.25em;
+		padding: 1.5em 1.25em;
 	}
 
 	.main-navigation ul ul {
@@ -3470,7 +3479,7 @@ object {
 	/* Scroll down arrow */
 
 	.site-header .menu-scroll-down {
-		display: block;
+		// display: block;
 		padding: 1.75em;
 		position: absolute;
 		right: 0;
@@ -4118,7 +4127,7 @@ object {
 .home #post-1 {
 	text-align: center;
 	// top: -210px;
-	margin: 60px 0;
+	margin: 0 0 60px;
 }
 
 .home #post-1 .wrap {
