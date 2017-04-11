@@ -414,7 +414,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	line-height: 1.4;
+	line-height: 1.25;
 	margin: 0 0 0.75em;
 	padding: 1.5em 0 0;
 }
@@ -1826,7 +1826,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	font-size: 32px;
 	font-size: 2rem;
 	font-weight: normal;
-	letter-spacing: 0.14em;
+	letter-spacing: 0.05em;
 	padding: 0.5em 0;
 	text-transform: uppercase;
 }
