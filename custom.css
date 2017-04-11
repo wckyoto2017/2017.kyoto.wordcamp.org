@@ -1285,8 +1285,6 @@ a:hover .nav-title,
 --------------------------------------------------------------*/
 
 .navigation-top {
-	background: #fcfcfc;
-	border: 2px solid #333;
 	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -1295,7 +1293,7 @@ a:hover .nav-title,
 }
 
 .navigation-top .wrap {
-	max-width: 1000px;
+	max-width: 1400px;
 	padding: 0;
 }
 
@@ -1305,7 +1303,8 @@ a:hover .nav-title,
 
 .navigation-top .current-menu-item > a,
 .navigation-top .current_page_item > a {
-	color: #767676;
+	background: #333;
+	color: #fcfcfc;
 }
 
 .main-navigation {
@@ -1314,7 +1313,7 @@ a:hover .nav-title,
 }
 
 .main-navigation ul {
-	background: #fff;
+	background: #fcfcfc;
 	list-style: none;
 	margin: 0;
 	padding: 0 1.5em;
@@ -1361,8 +1360,7 @@ a:hover .nav-title,
 	position: relative;
 }
 
-.main-navigation li li,
-.main-navigation li:last-child {
+.main-navigation li li {
 	border: 0;
 }
 
@@ -1373,7 +1371,8 @@ a:hover .nav-title,
 }
 
 .main-navigation a:hover {
-	color: #767676;
+	background: #666;
+	color: #fcfcfc;
 }
 
 /* Menu toggle */
@@ -3299,12 +3298,6 @@ object {
 		z-index: 3;
 	}
 
-	.navigation-top .wrap {
-		max-width: 1000px;
-		/* The font size is 14px here and we need 50px padding in ems */
-		padding: 0.75em 3.4166666666667em;
-	}
-
 	.navigation-top nav {
 		margin-left: -1.25em;
 	}
@@ -3340,8 +3333,13 @@ object {
 		display: block;
 	}
 
+	.js .main-navigation > div > .menu {
+		border: 2px solid #333;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
 	.main-navigation ul {
-		background: transparent;
 		padding: 0;
 	}
 
@@ -3353,15 +3351,17 @@ object {
 
 	.main-navigation li {
 		border: 0;
+		border-right: 2px solid #333;
 		display: inline-block;
 	}
+
 
 	.main-navigation li li {
 		display: block;
 	}
 
 	.main-navigation a {
-		padding: 1em 1.25em;
+		padding: 1.75em 1.25em;
 	}
 
 	.main-navigation ul ul {
@@ -3423,21 +3423,6 @@ object {
 		width: 16em;
 	}
 
-	.main-navigation li li {
-		-webkit-transition: background-color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out;
-	}
-
-	.main-navigation li li:hover,
-	.main-navigation li li.focus {
-		background: #767676;
-	}
-
-	.main-navigation li li a {
-		-webkit-transition: color 0.3s ease-in-out;
-		transition: color 0.3s ease-in-out;
-	}
-
 	.main-navigation li li.focus > a,
 	.main-navigation li li:focus > a,
 	.main-navigation li li:hover > a,
@@ -3447,7 +3432,7 @@ object {
 	.main-navigation li li.current-menu-item a:hover,
 	.main-navigation li li.current_page_item a:focus,
 	.main-navigation li li.current-menu-item a:focus {
-		color: #fff;
+		color: #fcfcfc;
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -3501,7 +3486,7 @@ object {
 
 	.site-header .menu-scroll-down {
 		display: block;
-		padding: 1em;
+		padding: 1.75em;
 		position: absolute;
 		right: 0;
 	}
@@ -3513,13 +3498,18 @@ object {
 	}
 
 	.site-header .menu-scroll-down {
-		color: #fff;
+		color: #fcfcfc;
 		top: 2em;
 	}
 
 	.site-header .navigation-top .menu-scroll-down {
-		color: #767676;
-		top: 0.7em;
+		color: #333;
+		right: 2px;
+		top: 2px;
+	}
+
+	.site-header .navigation-top .menu-scroll-down:hover {
+		color: #fcfcfc;
 	}
 
 	.menu-scroll-down:focus {
@@ -3897,10 +3887,6 @@ object {
 	/* Layout */
 
 	/* Navigation */
-	.navigation-top .wrap {
-		padding: 0.75em 2em;
-	}
-
 	.navigation-top nav {
 		margin-left: 0;
 	}
