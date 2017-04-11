@@ -2037,7 +2037,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .single-featured-image-header {
 	border-bottom: 1px solid #eee;
 	max-width: 1400px;
-	margin: 50px auto 0;
+	margin: 5em auto 0;
 }
 
 .single-featured-image-header img {
@@ -3530,7 +3530,7 @@ object {
 
 	.panel-content .wrap {
 		padding-bottom: 4.5em;
-		padding-top: 6em;
+		padding-top: 5em;
 	}
 
 	.panel-image {
@@ -3588,7 +3588,7 @@ object {
 	/* Posts */
 
 	.site-content {
-		padding: 5.5em 0 0;
+		padding: 5em 0 0;
 	}
 
 	.single-post .entry-title,
