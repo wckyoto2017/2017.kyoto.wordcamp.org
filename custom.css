@@ -1524,6 +1524,7 @@ body {
 
 .site-header {
 	position: relative;
+	min-height: 49px;
 }
 
 /* Site branding */
@@ -1614,6 +1615,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 
 .custom-header {
 	position: relative;
+	margin-bottom: 0 !important;
 }
 
 .has-header-image.twentyseventeen-front-page .custom-header,
@@ -2013,6 +2015,8 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 .single-featured-image-header {
 	border-bottom: 1px solid #eee;
+	max-width: 1400px;
+	margin: 50px auto 0;
 }
 
 .single-featured-image-header img {
