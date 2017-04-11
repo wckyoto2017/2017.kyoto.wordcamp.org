@@ -1293,8 +1293,8 @@ a:hover .nav-title,
 }
 
 .navigation-top .wrap {
-	border-left: 2px solid #333;
-	border-right: 2px solid #333;
+	border: 2px solid #333;
+	border-top: 0;
 	max-width: 960px;
 	padding: 0;
 }
@@ -3283,7 +3283,6 @@ object {
 
 	.navigation-top {
 		background: #fcfcfc;
-		border-bottom: 2px solid #333;
 		bottom: auto;
 		font-size: 14px;
 		font-size: 0.875rem;
