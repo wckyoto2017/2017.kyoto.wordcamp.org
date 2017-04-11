@@ -2220,12 +2220,12 @@ body:not(.twentyseventeen-front-page) .entry-header {
 --------------------------------------------------------------*/
 
 .site-footer {
-	border-top: 1px solid #eee;
+	border-top: 2px solid #333;
 }
 
 .site-footer .wrap {
 	padding-bottom: 1.5em;
-	padding-top: 2em;
+	padding-top: 1.5em;
 }
 
 /* Footer widgets */
@@ -2280,13 +2280,15 @@ body:not(.twentyseventeen-front-page) .entry-header {
 /* Site info */
 
 .site-info {
+	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 14px;
 	font-size: 0.875rem;
 	margin-bottom: 1em;
+	text-align: center;
 }
 
 .site-info a {
-	color: #666;
+	color: #333;
 }
 
 .site-info .sep {
@@ -3186,7 +3188,7 @@ object {
 	/* Layout */
 
 	.wrap {
-		max-width: 1000px;
+		max-width: 960px;
 		padding-left: 3em;
 		padding-right: 3em;
 	}
@@ -3839,9 +3841,7 @@ object {
 	}
 
 	.site-info {
-		float: left;
 		padding: 0.7em 0 0;
-		width: 58%;
 	}
 
 	.social-navigation + .site-info {
