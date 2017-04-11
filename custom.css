@@ -881,7 +881,7 @@ html[lang="mr-IN"] *,
 html[lang="el"] *,
 html[lang="gu-IN"] *,
 html[lang="he-IL"] *,
-html[lang="ja"] *,
+// html[lang="ja"] *,
 html[lang="ko-KR"] *,
 html[lang="th"] * {
 	letter-spacing: 0 !important;
@@ -1286,8 +1286,7 @@ a:hover .nav-title,
 
 .navigation-top {
 	background: #fcfcfc;
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
+	border: 2px solid #333;
 	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
@@ -3293,9 +3292,10 @@ object {
 		font-size: 14px;
 		font-size: 0.875rem;
 		left: 0;
+		margin: auto;
 		position: absolute;
 		right: 0;
-		width: 100%;
+		width: 1400px;
 		z-index: 3;
 	}
 
@@ -4129,4 +4129,43 @@ object {
 	.site-footer {
 		padding: 0;
 	}
+}
+
+
+/*--------------------------------------------------------------
+21.0 Only for 2017.kyoto.wordcamp.org
+--------------------------------------------------------------*/
+
+.home .custom-header {
+	margin-bottom: 200px;
+}
+
+/* Schedule */
+.home #post-1 {
+	text-align: center;
+	top: -210px;
+}
+
+.home #post-1 .wrap {
+	background: #333;
+	max-width: 1400px;
+	padding: 1em 2em;
+}
+
+.home #post-1 .entry-header {
+	display: none;
+}
+
+.home #post-1 .entry-content h2 {
+	color: #fff;
+	font-size: 16px;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	line-height: 1.75;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.home #post-1 .entry-content h2 small {
+	letter-spacing: 0.05em;
 }
