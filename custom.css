@@ -4115,15 +4115,10 @@ object {
 21.0 Only for 2017.kyoto.wordcamp.org
 --------------------------------------------------------------*/
 
-.home .custom-header {
-	// margin-bottom: 200px;
-}
-
 /* Schedule */
 .home #post-1 {
 	text-align: center;
-	// top: -210px;
-	margin: 0 0 60px;
+	margin: 0 0 80px;
 }
 
 .home #post-1 .wrap {
