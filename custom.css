@@ -4111,18 +4111,19 @@ object {
 --------------------------------------------------------------*/
 
 .home .custom-header {
-	margin-bottom: 200px;
+	// margin-bottom: 200px;
 }
 
 /* Schedule */
 .home #post-1 {
 	text-align: center;
-	top: -210px;
+	// top: -210px;
+	margin: 60px 0;
 }
 
 .home #post-1 .wrap {
 	background: #333;
-	max-width: 1400px;
+	max-width: 960px;
 	padding: 1em 2em;
 }
 
