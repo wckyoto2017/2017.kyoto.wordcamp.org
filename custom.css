@@ -1647,7 +1647,8 @@ body:not(.title-tagline-hidden) .site-branding-text {
 }
 
 .wp-custom-header {
-	padding: 100px 50px 50px;
+	padding-top: 0px;
+	margin-bottom: -120px;
 }
 
 .wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
