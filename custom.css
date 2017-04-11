@@ -1288,8 +1288,6 @@ a:hover .nav-title,
 }
 
 .navigation-top .wrap {
-	border: 2px solid #333;
-	border-top: 0;
 	max-width: 960px;
 	padding: 0;
 }
@@ -1305,6 +1303,8 @@ a:hover .nav-title,
 }
 
 .main-navigation {
+	border-top: 1px solid #999;
+	border-bottom: 1px solid #999;
 	clear: both;
 	display: block;
 }
@@ -1313,7 +1313,7 @@ a:hover .nav-title,
 	background: #fcfcfc;
 	list-style: none;
 	margin: 0;
-	padding: 0 1.5em;
+	padding: 0;
 	text-align: left;
 }
 
@@ -1330,7 +1330,6 @@ a:hover .nav-title,
 
 .main-navigation > div > ul {
 	border-top: 1px solid #eee;
-	padding: 0.75em 1.695em;
 }
 
 .js .main-navigation.toggled-on > div > ul {
@@ -1363,7 +1362,7 @@ a:hover .nav-title,
 
 .main-navigation a {
 	display: block;
-	padding: 0.5em 0;
+	padding: 0.5em 1em;
 	text-decoration: none;
 	transition: padding 0.1s linear;
 }
@@ -1380,7 +1379,7 @@ a:hover .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #c00;
+	color: #333;
 	display: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1389,6 +1388,7 @@ a:hover .nav-title,
 	margin: 1px auto 2px;
 	padding: 1em;
 	text-shadow: none;
+	width: 100%;
 }
 
 /* Display the menu toggle when JavaScript is available. */
@@ -1433,10 +1433,10 @@ a:hover .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #c00;
+	color: #333;
 	display: block;
 	font-size: 16px;
-	right: -0.5em;
+	right: 0;
 	line-height: 1.5;
 	margin: 0 auto;
 	padding: 0.5em;
@@ -1617,19 +1617,8 @@ body:not(.title-tagline-hidden) .site-branding-text {
 .has-header-video.twentyseventeen-front-page .custom-header,
 .has-header-image.home.blog .custom-header,
 .has-header-video.home.blog .custom-header {
-	display: table;
-	height: 300px;
-	height: 75vh;
-	width: 100%;
-}
-
-.custom-header-media {
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	position: absolute;
-	right: 0;
-	top: 0;
+	display: block;
+	height: auto;
 	width: 100%;
 }
 
@@ -1639,7 +1628,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	position: relative;
 	height: auto;
 	left: 50%;
-	max-width: 1000%;
 	-ms-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
@@ -1648,7 +1636,7 @@ body:not(.title-tagline-hidden) .site-branding-text {
 
 .wp-custom-header {
 	padding-top: 0px;
-	margin-bottom: -120px;
+	overflow: hidden;
 }
 
 .wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
@@ -2245,10 +2233,9 @@ body:not(.twentyseventeen-front-page) .entry-header {
 --------------------------------------------------------------*/
 
 .site-footer .wrap {
-	border: 2px solid #333;
-	border-bottom: 0;
-	padding-bottom: 0.5em;
-	padding-top: 0.5em;
+	border-top: 1px solid #999;
+	padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 /* Footer widgets */
@@ -2306,7 +2293,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 14px;
 	font-size: 0.875rem;
-	margin-bottom: 1em;
 	text-align: center;
 }
 
@@ -4117,7 +4103,7 @@ object {
 /* Schedule */
 .home #post-1 {
 	text-align: center;
-	margin: 0 0 80px;
+	margin: 20px 0;
 }
 
 .home #post-1 .wrap {
@@ -4133,7 +4119,7 @@ object {
 .home #post-1 .entry-content h2 {
 	border: 0;
 	color: #fff;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
 	letter-spacing: 0.1em;
 	line-height: 1.75;
@@ -4142,6 +4128,27 @@ object {
 	text-transform: uppercase;
 }
 
+@media screen and ( min-width: 360px ) {
+
+	.home #post-1 .entry-content h2 {
+		font-size: 16px;
+	}
+}
+
 .home #post-1 .entry-content h2 small {
 	letter-spacing: 0.05em;
+}
+
+.has-header-image .custom-header-media img {
+	width: 112.5%;
+	margin-top: -4%;
+	margin-bottom: -7%;
+	max-width: 1800px;
+}
+
+@media screen and ( min-width: 1600px ) {
+
+	.wp-custom-header {
+		margin-bottom: -120px;
+	}
 }
