@@ -821,6 +821,7 @@ html[lang="ja"] h3,
 html[lang="ja"] h4,
 html[lang="ja"] h5,
 html[lang="ja"] h6 {
+	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-weight: 700;
 }
 
@@ -1810,7 +1811,6 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	border-top: 2px solid #333;
 	border-bottom: 1px solid #333;
 	color: #333;
-	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 24px;
 	font-size: 1.5rem;
 	letter-spacing: 0.05em;
