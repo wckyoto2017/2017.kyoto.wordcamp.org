@@ -1819,6 +1819,11 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	text-transform: uppercase;
 }
 
+.entry-header {
+	max-width: 640px;
+	margin: auto;
+}
+
 .entry-header .entry-title {
 	margin-bottom: 0.25em;
 }
@@ -1927,6 +1932,11 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 
 .next.page-numbers {
 	float: right;
+}
+
+.entry-content {
+	max-width: 640px;
+	margin: auto;
 }
 
 .entry-content h1 {
@@ -3219,6 +3229,7 @@ object {
 
 	.custom-header-media {
 		position: relative;
+		margin-top: 70px;
 	}
 
 	.twentyseventeen-front-page.has-header-image .custom-header-media,
@@ -3276,10 +3287,6 @@ object {
 		z-index: 7;
 	}
 
-	.navigation-top nav {
-		margin-left: -1.25em;
-	}
-
 	.site-navigation-fixed.navigation-top {
 		bottom: auto;
 		position: fixed;
@@ -3307,7 +3314,12 @@ object {
 	}
 
 	.main-navigation {
+		border-bottom: 2px solid #333;
 		width: auto;
+	}
+
+	.home .main-navigation {
+		border-top: 0;
 	}
 
 	.js .main-navigation ul,
@@ -3809,6 +3821,10 @@ object {
 		margin-top: 3em;
 	}
 
+	.site-footer .wrap {
+		border-top: 2px solid #333;
+	}
+
 	.site-footer .widget-column.footer-widget-1 {
 		float: left;
 		width: 36%;
@@ -3827,7 +3843,7 @@ object {
 	}
 
 	.site-info {
-		padding: 0.7em 0 0;
+		padding: 0.7em 0;
 	}
 
 	.social-navigation + .site-info {
@@ -3862,6 +3878,23 @@ object {
 
 	.gallery-columns-9 .gallery-item {
 		max-width: 11.11%;
+	}
+}
+
+@media screen and ( min-width: 961px ) {
+
+	.main-navigation {
+		border: 2px solid #333;
+		border-top: 0;
+	}
+
+	.single-featured-image-header {
+		margin-top: 4em;
+	}
+
+	.site-footer .wrap {
+		border: 2px solid #333;
+		border-bottom: 0;
 	}
 }
 
@@ -4108,7 +4141,14 @@ object {
 /* Schedule */
 .home #post-1 {
 	text-align: center;
-	margin: 20px 0;
+	margin: 0;
+}
+
+@media screen and ( min-width: 961px ) {
+
+	.home #post-1 {
+		margin: 0 0 5em;
+	}
 }
 
 .home #post-1 .wrap {
@@ -4145,15 +4185,20 @@ object {
 }
 
 .has-header-image .custom-header-media img {
-	width: 112.5%;
-	margin-top: -4%;
-	margin-bottom: -7%;
-	max-width: 1800px;
+	max-width: 1380px;
+	vertical-align: top;
+	width: 100%;
 }
 
-@media screen and ( min-width: 1600px ) {
+@media screen and ( min-width: 1381px ) {
 
 	.wp-custom-header {
-		margin-bottom: -120px;
+		background: url(https://2017.kyoto.wordcamp.org/files/2017/04/main-fcfcfc-1800x960.png) center -90px no-repeat;
+		height: 694px;
+		margin: 20px 0 60px;
+	}
+
+	.wp-custom-header img {
+		display: none;
 	}
 }
