@@ -1303,10 +1303,13 @@ a:hover .nav-title,
 }
 
 .main-navigation {
-	border-top: 1px solid #999;
 	border-bottom: 1px solid #999;
 	clear: both;
 	display: block;
+}
+
+.home .main-navigation {
+	border-top: 1px solid #999;
 }
 
 .main-navigation ul {
@@ -1337,7 +1340,7 @@ a:hover .nav-title,
 }
 
 .main-navigation ul ul {
-	padding: 0 0 0 1.5em;
+	padding: 0 0 0 1em;
 }
 
 .main-navigation ul ul.toggled-on {
@@ -1346,7 +1349,7 @@ a:hover .nav-title,
 
 .main-navigation ul ul a {
 	letter-spacing: 0;
-	padding: 0.4em 0;
+	padding: 0.4em 0.8em;
 	position: relative;
 	text-transform: none;
 }
@@ -1609,8 +1612,9 @@ body:not(.title-tagline-hidden) .site-branding-text {
 }
 
 .custom-header {
-	position: relative;
 	margin-bottom: 0 !important;
+	overflow: hidden;
+	position: relative;
 }
 
 .has-header-image.twentyseventeen-front-page .custom-header,
@@ -1807,9 +1811,10 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	border-bottom: 1px solid #333;
 	color: #333;
 	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	font-size: 32px;
-	font-size: 2rem;
+	font-size: 24px;
+	font-size: 1.5rem;
 	letter-spacing: 0.05em;
+	line-height: 1.5;
 	padding: 0.5em 0;
 	text-transform: uppercase;
 }
@@ -2025,7 +2030,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .single-featured-image-header {
 	border-bottom: 1px solid #eee;
 	max-width: 1400px;
-	margin: 5em auto 0;
+	margin: 0 auto;
 }
 
 .single-featured-image-header img {
