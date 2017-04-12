@@ -4193,7 +4193,8 @@ object {
 @media screen and ( min-width: 1381px ) {
 
 	.wp-custom-header {
-		background: url(https://2017.kyoto.wordcamp.org/files/2017/04/main-fcfcfc-1800x960.png) center -90px no-repeat;
+		background: url(https://wckyoto2017.github.io/main-image/main-fcfcfc-1800x960.svg) center -90px no-repeat;
+		background-size: 1800px 960px;
 		height: 694px;
 		margin: 20px 0 60px;
 	}
