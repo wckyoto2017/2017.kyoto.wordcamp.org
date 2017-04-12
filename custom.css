@@ -4139,29 +4139,29 @@ object {
 --------------------------------------------------------------*/
 
 /* Schedule */
-.home #post-1 {
+.home #post-470 {
 	text-align: center;
 	margin: 0;
 }
 
 @media screen and ( min-width: 961px ) {
 
-	.home #post-1 {
+	.home #post-470 {
 		margin: 0 0 5em;
 	}
 }
 
-.home #post-1 .wrap {
+.home #post-470 .wrap {
 	background: #333;
 	max-width: 960px;
 	padding: 1em 2em;
 }
 
-.home #post-1 .entry-header {
+.home #post-470 .entry-header {
 	display: none;
 }
 
-.home #post-1 .entry-content h2 {
+.home #post-470 .entry-content h2 {
 	border: 0;
 	color: #fff;
 	font-size: 14px;
@@ -4175,12 +4175,12 @@ object {
 
 @media screen and ( min-width: 360px ) {
 
-	.home #post-1 .entry-content h2 {
+	.home #post-470 .entry-content h2 {
 		font-size: 16px;
 	}
 }
 
-.home #post-1 .entry-content h2 small {
+.home #post-470 .entry-content h2 small {
 	letter-spacing: 0.05em;
 }
 
