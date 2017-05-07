@@ -1339,7 +1339,17 @@ a:hover .nav-title,
 }
 
 .main-navigation > div > ul {
+	background: #fff;
 	padding: 0.65em 0;
+	position: relative;
+}
+
+.js .main-navigation.toggled-on > div:before {
+	background: rgba(0, 0, 0, 0.3);
+	content: "";
+	height: 100%;
+	position: fixed;
+	width: 100%;
 }
 
 .js .main-navigation.toggled-on > div > ul {
