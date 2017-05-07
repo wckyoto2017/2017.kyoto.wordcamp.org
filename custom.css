@@ -1288,11 +1288,12 @@ a:hover .nav-title,
 
 .navigation-top {
 	background: #fff;
-	border-bottom: 1px solid #eee;
-	border-top: 1px solid #eee;
 	font-size: 16px;
 	font-size: 1rem;
-	position: relative;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 99;
 }
 
 .navigation-top .wrap {
@@ -1393,9 +1394,11 @@ a:hover .nav-title,
 	font-size: 0.875rem;
 	font-weight: 800;
 	line-height: 1.5;
-	margin: 1px auto 2px;
 	padding: 1em;
 	text-shadow: none;
+	position: absolute;
+	top: 0;
+	right: 0;
 }
 
 /* Display the menu toggle when JavaScript is available. */
@@ -1422,7 +1425,7 @@ a:hover .nav-title,
 
 .menu-toggle .icon {
 	font-size: 18px;
-	margin: 0.5em;
+	margin: 0.75em;
 }
 
 .toggled-on .menu-toggle .icon-bars,
