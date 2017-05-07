@@ -37,7 +37,6 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 
 html {
 	font-family: sans-serif;
-	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -813,7 +812,8 @@ html[lang="ja"] button,
 html[lang="ja"] input,
 html[lang="ja"] select,
 html[lang="ja"] textarea {
-	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+	font-family: 'Open Sans', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-feature-settings : "palt" 1;
 }
 
 html[lang="ja"] h1,
@@ -822,6 +822,7 @@ html[lang="ja"] h3,
 html[lang="ja"] h4,
 html[lang="ja"] h5,
 html[lang="ja"] h6 {
+	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-weight: 700;
 }
 
