@@ -1402,6 +1402,7 @@ a:hover .nav-title,
 
 .js .menu-toggle {
 	display: block;
+	font-size: 0;
 }
 
 .main-navigation.toggled-on ul.nav-menu {
@@ -1420,8 +1421,8 @@ a:hover .nav-title,
 }
 
 .menu-toggle .icon {
-	margin-right: 0.5em;
-	top: -2px;
+	font-size: 18px;
+	margin: 0.5em;
 }
 
 .toggled-on .menu-toggle .icon-bars,
