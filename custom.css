@@ -1356,7 +1356,6 @@ a:hover .nav-title,
 
 .main-navigation ul ul a {
 	letter-spacing: 0;
-	padding: 0.4em 0;
 	position: relative;
 	text-transform: none;
 }
@@ -1398,6 +1397,7 @@ a:hover .nav-title,
 	position: absolute;
 	top: 0;
 	right: 0;
+	z-index: 9999;
 }
 
 /* Display the menu toggle when JavaScript is available. */
@@ -1445,14 +1445,18 @@ a:hover .nav-title,
 	box-shadow: none;
 	color: #222;
 	display: block;
-	font-size: 16px;
-	right: -0.5em;
-	line-height: 1.5;
+	font-size: 18px;
+	right: 0;
+	line-height: 1;
 	margin: 0 auto;
-	padding: 0.5em;
+	padding: 0.5em 0.75em;
 	position: absolute;
 	text-shadow: none;
 	top: 0;
+}
+
+.dropdown-toggle .icon {
+	vertical-align: top;
 }
 
 .dropdown-toggle:hover,
