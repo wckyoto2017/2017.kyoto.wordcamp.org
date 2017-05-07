@@ -37,6 +37,7 @@ Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 
 html {
 	font-family: sans-serif;
+	line-height: 1.15;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -120,7 +121,7 @@ dfn {
 
 mark {
 	background-color: #eee;
-	color: #c00;
+	color: #222;
 }
 
 small {
@@ -401,10 +402,10 @@ select,
 textarea {
 	color: #333;
 	font-family: "Libre Franklin", "Helvetica Neue", helvetica, arial, sans-serif;
-	font-size: 14px;
-	font-size: 0.875rem;
+	font-size: 15px;
+	font-size: 0.9375rem;
 	font-weight: 400;
-	line-height: 1.85;
+	line-height: 1.66;
 }
 
 h1,
@@ -414,7 +415,7 @@ h4,
 h5,
 h6 {
 	clear: both;
-	line-height: 1.25;
+	line-height: 1.4;
 	margin: 0 0 0.75em;
 	padding: 1.5em 0 0;
 }
@@ -431,21 +432,22 @@ h6:first-child {
 h1 {
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-weight: 800;
+	font-weight: 300;
 }
 
-h2 {
-	color: #333;
+h2,
+.home.blog .entry-title {
+	color: #666;
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-weight: 800;
+	font-weight: 300;
 }
 
 h3 {
 	color: #333;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-weight: 800;
+	font-weight: 300;
 }
 
 h4 {
@@ -456,9 +458,9 @@ h4 {
 }
 
 h5 {
-	color: #333;
-	font-size: 14px;
-	font-size: 0.875rem;
+	color: #767676;
+	font-size: 13px;
+	font-size: 0.8125rem;
 	font-weight: 800;
 	letter-spacing: 0.15em;
 	text-transform: uppercase;
@@ -466,8 +468,8 @@ h5 {
 
 h6 {
 	color: #333;
-	font-size: 12px;
-	font-size: 0.75rem;
+	font-size: 15px;
+	font-size: 0.9375rem;
 	font-weight: 800;
 }
 
@@ -811,8 +813,7 @@ html[lang="ja"] button,
 html[lang="ja"] input,
 html[lang="ja"] select,
 html[lang="ja"] textarea {
-	font-family: 'Open Sans', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	font-feature-settings : "palt" 1;
+	font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
 }
 
 html[lang="ja"] h1,
@@ -821,7 +822,6 @@ html[lang="ja"] h3,
 html[lang="ja"] h4,
 html[lang="ja"] h5,
 html[lang="ja"] h6 {
-	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-weight: 700;
 }
 
@@ -882,7 +882,7 @@ html[lang="mr-IN"] *,
 html[lang="el"] *,
 html[lang="gu-IN"] *,
 html[lang="he-IL"] *,
-// html[lang="ja"] *,
+html[lang="ja"] *,
 html[lang="ko-KR"] *,
 html[lang="th"] * {
 	letter-spacing: 0 !important;
@@ -946,7 +946,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	color: #c00;
+	color: #222;
 	border-color: #333;
 }
 
@@ -971,7 +971,7 @@ input[type="checkbox"] + label {
 button,
 input[type="button"],
 input[type="submit"] {
-	background-color: #c00;
+	background-color: #222;
 	border: 0;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -1002,7 +1002,7 @@ input[type="button"].secondary,
 input[type="reset"].secondary,
 input[type="submit"].secondary {
 	background-color: #ddd;
-	color: #c00;
+	color: #222;
 }
 
 button:hover,
@@ -1068,7 +1068,7 @@ hr {
 ul,
 ol {
 	margin: 0 0 1.5em;
-	padding-left: 1em;
+	padding: 0;
 }
 
 ul {
@@ -1136,7 +1136,7 @@ td:last-child {
 --------------------------------------------------------------*/
 
 a {
-	color: #c00;
+	color: #222;
 	text-decoration: none;
 }
 
@@ -1158,8 +1158,12 @@ a:active {
 .site-footer .widget-area a,
 .posts-navigation a,
 .widget_authors a strong {
-	background: linear-gradient(transparent 60%, rgba(230, 180, 34, 0.3) 0%);
-	color: #333;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+	box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
+	-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
+	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
 }
 
 .entry-title a,
@@ -1241,8 +1245,9 @@ a:hover .nav-title,
 .widget .widget-title a:hover,
 .widget ul li a:focus,
 .widget ul li a:hover {
-	color: #333;
-	background: linear-gradient(transparent 0%, rgba(230, 180, 34, 0.3) 0%);
+	color: #000;
+	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
 }
 
 /* Fixes linked images */
@@ -1254,7 +1259,7 @@ a:hover .nav-title,
 
 .post-navigation a:focus .icon,
 .post-navigation a:hover .icon {
-	color: #c00;
+	color: #222;
 }
 
 /*--------------------------------------------------------------
@@ -1281,43 +1286,41 @@ a:hover .nav-title,
 --------------------------------------------------------------*/
 
 .navigation-top {
-	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee;
 	font-size: 16px;
 	font-size: 1rem;
 	position: relative;
-	text-transform: uppercase;
 }
 
 .navigation-top .wrap {
-	max-width: 960px;
+	max-width: 1000px;
 	padding: 0;
 }
 
 .navigation-top a {
-	color: #333;
+	color: #222;
+	font-weight: 600;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
 }
 
 .navigation-top .current-menu-item > a,
 .navigation-top .current_page_item > a {
-	background: #333;
-	color: #fcfcfc;
+	color: #767676;
 }
 
 .main-navigation {
-	border-bottom: 1px solid #999;
 	clear: both;
 	display: block;
 }
 
-.home .main-navigation {
-	border-top: 1px solid #999;
-}
-
 .main-navigation ul {
-	background: #fcfcfc;
+	background: #fff;
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 1.5em;
 	text-align: left;
 }
 
@@ -1334,6 +1337,7 @@ a:hover .nav-title,
 
 .main-navigation > div > ul {
 	border-top: 1px solid #eee;
+	padding: 0.75em 1.695em;
 }
 
 .js .main-navigation.toggled-on > div > ul {
@@ -1341,7 +1345,7 @@ a:hover .nav-title,
 }
 
 .main-navigation ul ul {
-	padding: 0 0 0 1em;
+	padding: 0 0 0 1.5em;
 }
 
 .main-navigation ul ul.toggled-on {
@@ -1350,7 +1354,7 @@ a:hover .nav-title,
 
 .main-navigation ul ul a {
 	letter-spacing: 0;
-	padding: 0.4em 0.8em;
+	padding: 0.4em 0;
 	position: relative;
 	text-transform: none;
 }
@@ -1360,20 +1364,19 @@ a:hover .nav-title,
 	position: relative;
 }
 
-.main-navigation li li {
+.main-navigation li li,
+.main-navigation li:last-child {
 	border: 0;
 }
 
 .main-navigation a {
 	display: block;
-	padding: 0.5em 1em;
+	padding: 0.5em 0;
 	text-decoration: none;
-	transition: padding 0.1s linear;
 }
 
 .main-navigation a:hover {
-	background: #666;
-	color: #fcfcfc;
+	color: #767676;
 }
 
 /* Menu toggle */
@@ -1383,7 +1386,7 @@ a:hover .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #333;
+	color: #222;
 	display: none;
 	font-size: 14px;
 	font-size: 0.875rem;
@@ -1392,7 +1395,6 @@ a:hover .nav-title,
 	margin: 1px auto 2px;
 	padding: 1em;
 	text-shadow: none;
-	width: 100%;
 }
 
 /* Display the menu toggle when JavaScript is available. */
@@ -1437,10 +1439,10 @@ a:hover .nav-title,
 	border: 0;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #333;
+	color: #222;
 	display: block;
 	font-size: 16px;
-	right: 0;
+	right: -0.5em;
 	line-height: 1.5;
 	margin: 0 auto;
 	padding: 0.5em;
@@ -1490,7 +1492,7 @@ html {
 }
 
 body {
-	background-color: #fcfcfc;
+	background: #fff;
 	/* Fallback for when there is no custom background color defined. */
 }
 
@@ -1522,15 +1524,17 @@ body {
 }
 
 .site-header {
+	background-color: #fafafa;
 	position: relative;
-	min-height: 49px;
 }
 
 /* Site branding */
 
 .site-branding {
-	margin-bottom: 0 !important;
+	padding: 1em 0;
 	position: relative;
+	-webkit-transition: margin-bottom 0.2s;
+	transition: margin-bottom 0.2s;
 	z-index: 3;
 }
 
@@ -1559,7 +1563,7 @@ body {
 
 .site-title,
 .site-title a {
-	color: #c00;
+	color: #222;
 	opacity: 1; /* Prevent opacity from changing during selective refreshes in the customize preview */
 }
 
@@ -1613,8 +1617,6 @@ body:not(.title-tagline-hidden) .site-branding-text {
 }
 
 .custom-header {
-	margin-bottom: 0 !important;
-	overflow: hidden;
 	position: relative;
 }
 
@@ -1622,26 +1624,55 @@ body:not(.title-tagline-hidden) .site-branding-text {
 .has-header-video.twentyseventeen-front-page .custom-header,
 .has-header-image.home.blog .custom-header,
 .has-header-video.home.blog .custom-header {
-	display: block;
-	height: auto;
+	display: table;
+	height: 300px;
+	height: 75vh;
 	width: 100%;
+}
+
+.custom-header-media {
+	bottom: 0;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+
+.custom-header-media:before {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+75 */
+	background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 75%, rgba(0, 0, 0, 0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	z-index: 2;
 }
 
 .has-header-image .custom-header-media img,
 .has-header-video .custom-header-media video,
 .has-header-video .custom-header-media iframe {
-	position: relative;
+	position: fixed;
 	height: auto;
 	left: 50%;
-	-ms-transform: translateX(-50%);
-	-moz-transform: translateX(-50%);
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
-}
-
-.wp-custom-header {
-	padding-top: 0px;
-	overflow: hidden;
+	max-width: 1000%;
+	min-height: 100%;
+	min-width: 100%;
+	min-width: 100vw; /* vw prevents 1px gap on left that 100% has */
+	width: auto;
+	top: 50%;
+	padding-bottom: 1px; /* Prevent header from extending beyond the footer */
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
 }
 
 .wp-custom-header .wp-custom-header-video-button { /* Specificity prevents .color-dark button overrides */
@@ -1680,6 +1711,25 @@ body:not(.title-tagline-hidden) .site-branding-text {
 	transform: translateX(-50%) translateY(0);
 }
 
+/* For browsers that support 'object-fit' */
+@supports ( object-fit: cover ) {
+	.has-header-image .custom-header-media img,
+	.has-header-video .custom-header-media video,
+	.has-header-video .custom-header-media iframe,
+	.has-header-image:not(.twentyseventeen-front-page):not(.home) .custom-header-media img {
+		height: 100%;
+		left: 0;
+		-o-object-fit: cover;
+		object-fit: cover;
+		top: 0;
+		-ms-transform: none;
+		-moz-transform: none;
+		-webkit-transform: none;
+		transform: none;
+		width: 100%;
+	}
+}
+
 /* Hides div in Customizer preview when header images or videos change. */
 
 body:not(.has-header-image):not(.has-header-video) .custom-header-media {
@@ -1716,9 +1766,23 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 	position: relative;
 }
 
+.panel-image:before {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.3+100 */ /* FF3.6-15 */
+	background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
+	background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000", endColorstr="#4d000000", GradientType=0); /* IE6-9 */
+	bottom: 0;
+	content: "";
+	left: 0;
+	right: 0;
+	position: absolute;
+	top: 100px;
+}
+
 .twentyseventeen-front-page article:not(.has-post-thumbnail):not(:first-child) {
 	border-top: 1px solid #ddd;
-	border-top: 0;
 }
 
 .panel-content {
@@ -1763,7 +1827,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 .twentyseventeen-panel .recent-posts .entry-header .edit-link {
-	color: #c00;
+	color: #222;
 	display: inline-block;
 	font-size: 11px;
 	font-size: 0.6875rem;
@@ -1775,6 +1839,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 --------------------------------------------------------------*/
 
 .site-content-contain {
+	background-color: #fff;
 	position: relative;
 }
 
@@ -1808,20 +1873,12 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .page .panel-content .entry-title,
 .page-title,
 body.page:not(.twentyseventeen-front-page) .entry-title {
-	border-top: 2px solid #333;
-	border-bottom: 1px solid #333;
-	color: #333;
-	font-size: 24px;
-	font-size: 1.5rem;
-	letter-spacing: 0.05em;
-	line-height: 1.5;
-	padding: 0.5em 0;
+	color: #222;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: 800;
+	letter-spacing: 0.14em;
 	text-transform: uppercase;
-}
-
-.entry-header {
-	max-width: 640px;
-	margin: auto;
 }
 
 .entry-header .entry-title {
@@ -1934,37 +1991,6 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	float: right;
 }
 
-.entry-content {
-	max-width: 640px;
-	margin: auto;
-}
-
-.entry-content h1 {
-	border-bottom: 1px solid #333;
-	padding-bottom: 0.5em;
-}
-
-.entry-content h2 {
-	border-bottom: 1px solid #333;
-	padding-bottom: 0.5em;
-}
-
-.entry-content h3 {
-	margin-top: 1.5em;
-	padding-top: 0;
-	position: relative;
-}
-
-.entry-content h3:before {
-	background: #333;
-	content: "";
-	display: block;
-	height: 100%;
-	position: absolute;
-	left: -0.75em;
-	width: 2px;
-}
-
 /* Aligned blockquotes */
 
 .entry-content blockquote.alignleft,
@@ -2001,7 +2027,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 .blog .entry-meta a.post-edit-link,
 .archive .entry-meta a.post-edit-link,
 .search .entry-meta a.post-edit-link {
-	color: #c00;
+	color: #222;
 	display: inline-block;
 	margin-left: 1em;
 	white-space: nowrap;
@@ -2038,9 +2064,8 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .single-featured-image-header {
+	background-color: #fafafa;
 	border-bottom: 1px solid #eee;
-	max-width: 1400px;
-	margin: 0 auto;
 }
 
 .single-featured-image-header img {
@@ -2066,7 +2091,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .page-links a .page-number {
-	color: #c00;
+	color: #222;
 }
 
 /* Entry footer */
@@ -2113,7 +2138,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .entry-footer .edit-link a.post-edit-link {
-	background-color: #c00;
+	background-color: #222;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 	-webkit-box-shadow: none;
@@ -2247,10 +2272,13 @@ body:not(.twentyseventeen-front-page) .entry-header {
 13.6 Footer
 --------------------------------------------------------------*/
 
+.site-footer {
+	border-top: 1px solid #eee;
+}
+
 .site-footer .wrap {
-	border-top: 1px solid #999;
-	padding-bottom: 1em;
-	padding-top: 1em;
+	padding-bottom: 1.5em;
+	padding-top: 2em;
 }
 
 /* Footer widgets */
@@ -2305,14 +2333,13 @@ body:not(.twentyseventeen-front-page) .entry-header {
 /* Site info */
 
 .site-info {
-	font-family: 'Muli', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	font-size: 14px;
 	font-size: 0.875rem;
-	text-align: center;
+	margin-bottom: 1em;
 }
 
 .site-info a {
-	color: #333;
+	color: #666;
 }
 
 .site-info .sep {
@@ -2390,7 +2417,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .comment-metadata a.comment-edit-link {
-	color: #c00;
+	color: #222;
 	margin-left: 1em;
 }
 
@@ -2407,7 +2434,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .comment-reply-link .icon {
-	color: #c00;
+	color: #222;
 	left: -2em;
 	height: 1em;
 	position: absolute;
@@ -2455,7 +2482,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 h2.widget-title {
-	color: #c00;
+	color: #222;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-weight: 800;
@@ -2767,7 +2794,7 @@ object {
 
 .site-content .wp-playlist-light {
 	border-color: #eee;
-	color: #c00;
+	color: #222;
 }
 
 .site-content .wp-playlist-light .wp-playlist-current-item .wp-playlist-item-album {
@@ -2834,13 +2861,13 @@ object {
 .site-content .wp-playlist-dark .wp-playlist-item:focus {
 	border-bottom-color: rgba(0, 0, 0, 0);
 	background-color: #aaa;
-	color: #c00;
+	color: #222;
 }
 
 .site-content .wp-playlist-dark a.wp-playlist-caption:hover,
 .site-content .wp-playlist-dark .wp-playlist-item:hover a,
 .site-content .wp-playlist-dark .wp-playlist-item:focus a {
-	color: #c00;
+	color: #222;
 }
 
 /* Playlist Style Overrides */
@@ -3052,7 +3079,7 @@ object {
 
 .no-svg .social-navigation a {
 	background: transparent;
-	color: #c00;
+	color: #222;
 	height: auto;
 	width: auto;
 }
@@ -3088,9 +3115,45 @@ object {
 
 	/* Typography */
 
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	h1 {
+		font-size: 30px;
+		font-size: 1.875rem;
+	}
+
+	h2,
+	.home.blog .entry-title,
 	.page .panel-content .recent-posts .entry-title {
-		font-size: 24px;
-		font-size: 1.5rem;
+		font-size: 26px;
+		font-size: 1.625rem;
+	}
+
+	h3 {
+		font-size: 22px;
+		font-size: 1.375rem;
+	}
+
+	h4 {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+
+	h5 {
+		font-size: 13px;
+		font-size: 0.8125rem;
+	}
+
+	h6 {
+		font-size: 16px;
+		font-size: 1rem;
 	}
 
 	.entry-content blockquote.alignleft,
@@ -3111,6 +3174,10 @@ object {
 	}
 
 	/* Site Branding */
+
+	.site-branding {
+		padding: 3em 0;
+	}
 
 	/* Front Page */
 
@@ -3177,6 +3244,16 @@ object {
 
 	/* Typography */
 
+	body,
+	button,
+	input,
+	select,
+	textarea {
+		font-size: 16px;
+		font-size: 1rem;
+		line-height: 1.5;
+	}
+
 	.entry-content blockquote.alignleft,
 	.entry-content blockquote.alignright {
 		font-size: 13px;
@@ -3186,7 +3263,7 @@ object {
 	/* Layout */
 
 	.wrap {
-		max-width: 960px;
+		max-width: 1000px;
 		padding-left: 3em;
 		padding-right: 3em;
 	}
@@ -3208,6 +3285,10 @@ object {
 
 	/* Site Branding */
 
+	.site-branding {
+		margin-bottom: 0;
+	}
+
 	.has-header-image.twentyseventeen-front-page .site-branding,
 	.has-header-video.twentyseventeen-front-page .site-branding,
 	.has-header-image.home.blog .site-branding,
@@ -3216,6 +3297,8 @@ object {
 		display: block;
 		left: 0;
 		height: auto;
+		padding-top: 0;
+		position: absolute;
 		width: 100%;
 	}
 
@@ -3228,14 +3311,15 @@ object {
 	}
 
 	.custom-header-media {
+		height: 165px;
 		position: relative;
-		margin-top: 70px;
 	}
 
 	.twentyseventeen-front-page.has-header-image .custom-header-media,
 	.twentyseventeen-front-page.has-header-video .custom-header-media,
 	.home.blog.has-header-image .custom-header-media,
 	.home.blog.has-header-video .custom-header-media {
+		height: 0;
 		position: relative;
 	}
 
@@ -3277,14 +3361,24 @@ object {
 	/* Navigation */
 
 	.navigation-top {
-		bottom: auto;
+		bottom: 0;
 		font-size: 14px;
 		font-size: 0.875rem;
 		left: 0;
-		position: fixed;
+		position: absolute;
 		right: 0;
-		top: 0;
-		z-index: 7;
+		width: 100%;
+		z-index: 3;
+	}
+
+	.navigation-top .wrap {
+		max-width: 1000px;
+		/* The font size is 14px here and we need 50px padding in ems */
+		padding: 0.75em 3.4166666666667em;
+	}
+
+	.navigation-top nav {
+		margin-left: -1.25em;
 	}
 
 	.site-navigation-fixed.navigation-top {
@@ -3295,11 +3389,6 @@ object {
 		top: 0;
 		width: 100%;
 		z-index: 7;
-	}
-
-	.site-navigation-fixed.navigation-top .main-navigation a {
-		padding-top: 0.75em;
-		padding-bottom: 0.75em;
 	}
 
 	.admin-bar .site-navigation-fixed.navigation-top {
@@ -3314,12 +3403,7 @@ object {
 	}
 
 	.main-navigation {
-		border-bottom: 2px solid #333;
 		width: auto;
-	}
-
-	.home .main-navigation {
-		border-top: 0;
 	}
 
 	.js .main-navigation ul,
@@ -3328,12 +3412,8 @@ object {
 		display: block;
 	}
 
-	.js .main-navigation > div > .menu {
-		display: flex;
-		flex-flow: row wrap;
-	}
-
 	.main-navigation ul {
+		background: transparent;
 		padding: 0;
 	}
 
@@ -3345,17 +3425,15 @@ object {
 
 	.main-navigation li {
 		border: 0;
-		border-right: 2px solid #333;
 		display: inline-block;
 	}
-
 
 	.main-navigation li li {
 		display: block;
 	}
 
 	.main-navigation a {
-		padding: 1.5em 1.25em;
+		padding: 1em 1.25em;
 	}
 
 	.main-navigation ul ul {
@@ -3417,6 +3495,21 @@ object {
 		width: 16em;
 	}
 
+	.main-navigation li li {
+		-webkit-transition: background-color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out;
+	}
+
+	.main-navigation li li:hover,
+	.main-navigation li li.focus {
+		background: #767676;
+	}
+
+	.main-navigation li li a {
+		-webkit-transition: color 0.3s ease-in-out;
+		transition: color 0.3s ease-in-out;
+	}
+
 	.main-navigation li li.focus > a,
 	.main-navigation li li:focus > a,
 	.main-navigation li li:hover > a,
@@ -3426,7 +3519,7 @@ object {
 	.main-navigation li li.current-menu-item a:hover,
 	.main-navigation li li.current_page_item a:focus,
 	.main-navigation li li.current-menu-item a:focus {
-		color: #fcfcfc;
+		color: #fff;
 	}
 
 	.main-navigation ul li:hover > ul,
@@ -3479,8 +3572,8 @@ object {
 	/* Scroll down arrow */
 
 	.site-header .menu-scroll-down {
-		// display: block;
-		padding: 1.75em;
+		display: block;
+		padding: 1em;
 		position: absolute;
 		right: 0;
 	}
@@ -3492,18 +3585,13 @@ object {
 	}
 
 	.site-header .menu-scroll-down {
-		color: #fcfcfc;
+		color: #fff;
 		top: 2em;
 	}
 
 	.site-header .navigation-top .menu-scroll-down {
-		color: #333;
-		right: 2px;
-		top: 2px;
-	}
-
-	.site-header .navigation-top .menu-scroll-down:hover {
-		color: #fcfcfc;
+		color: #767676;
+		top: 0.7em;
 	}
 
 	.menu-scroll-down:focus {
@@ -3517,11 +3605,28 @@ object {
 
 	/* Front Page */
 
+	.twentyseventeen-front-page.has-header-image .site-branding,
+	.twentyseventeen-front-page.has-header-video .site-branding,
+	.home.blog.has-header-image .site-branding,
+	.home.blog.has-header-video .site-branding {
+		margin-bottom: 70px;
+	}
+
 	.twentyseventeen-front-page.has-header-image .custom-header-media,
 	.twentyseventeen-front-page.has-header-video .custom-header-media,
 	.home.blog.has-header-image .custom-header-media,
 	.home.blog.has-header-video .custom-header-media {
+		height: 1200px;
+		height: 100vh;
+		max-height: 100%;
 		overflow: hidden;
+	}
+
+	.twentyseventeen-front-page.has-header-image .custom-header-media:before,
+	.twentyseventeen-front-page.has-header-video .custom-header-media:before,
+	.home.blog.has-header-image .custom-header-media:before,
+	.home.blog.has-header-video .custom-header-media:before {
+		height: 33%;
 	}
 
 	.admin-bar.twentyseventeen-front-page.has-header-image .custom-header-media,
@@ -3533,20 +3638,17 @@ object {
 
 	.panel-content .wrap {
 		padding-bottom: 4.5em;
-		padding-top: 5em;
+		padding-top: 6em;
 	}
 
 	.panel-image {
-		height: 480px;
-		margin: auto;
-		width: 960px;
-		// height: 100vh;
-		// max-height: 1200px;
+		height: 100vh;
+		max-height: 1200px;
 	}
 
 	/* With panel images 100% of the screen height, we're going to fix the background image where supported to create a parallax-like effect. */
 	.background-fixed .panel-image {
-		// background-attachment: fixed;
+		background-attachment: fixed;
 	}
 
 	.page-two-column .panel-content .entry-header {
@@ -3591,7 +3693,7 @@ object {
 	/* Posts */
 
 	.site-content {
-		padding: 5em 0 0;
+		padding: 5.5em 0 0;
 	}
 
 	.single-post .entry-title,
@@ -3821,10 +3923,6 @@ object {
 		margin-top: 3em;
 	}
 
-	.site-footer .wrap {
-		border-top: 2px solid #333;
-	}
-
 	.site-footer .widget-column.footer-widget-1 {
 		float: left;
 		width: 36%;
@@ -3843,7 +3941,9 @@ object {
 	}
 
 	.site-info {
-		padding: 0.7em 0;
+		float: left;
+		padding: 0.7em 0 0;
+		width: 58%;
 	}
 
 	.social-navigation + .site-info {
@@ -3881,28 +3981,15 @@ object {
 	}
 }
 
-@media screen and ( min-width: 961px ) {
-
-	.main-navigation {
-		border: 2px solid #333;
-		border-top: 0;
-	}
-
-	.single-featured-image-header {
-		margin-top: 4em;
-	}
-
-	.site-footer .wrap {
-		border: 2px solid #333;
-		border-bottom: 0;
-	}
-}
-
 @media screen and ( min-width: 67em ) {
 
 	/* Layout */
 
 	/* Navigation */
+	.navigation-top .wrap {
+		padding: 0.75em 2em;
+	}
+
 	.navigation-top nav {
 		margin-left: 0;
 	}
@@ -4130,76 +4217,5 @@ object {
 
 	.site-footer {
 		padding: 0;
-	}
-}
-
-
-/*--------------------------------------------------------------
-21.0 Only for 2017.kyoto.wordcamp.org
---------------------------------------------------------------*/
-
-/* Schedule */
-.home #post-470 {
-	text-align: center;
-	margin: 0;
-}
-
-@media screen and ( min-width: 961px ) {
-
-	.home #post-470 {
-		margin: 0 0 5em;
-	}
-}
-
-.home #post-470 .wrap {
-	background: #333;
-	max-width: 960px;
-	padding: 1em 2em;
-}
-
-.home #post-470 .entry-header {
-	display: none;
-}
-
-.home #post-470 .entry-content h2 {
-	border: 0;
-	color: #fff;
-	font-size: 14px;
-	font-weight: normal;
-	letter-spacing: 0.1em;
-	line-height: 1.75;
-	margin: 0;
-	padding: 0;
-	text-transform: uppercase;
-}
-
-@media screen and ( min-width: 360px ) {
-
-	.home #post-470 .entry-content h2 {
-		font-size: 16px;
-	}
-}
-
-.home #post-470 .entry-content h2 small {
-	letter-spacing: 0.05em;
-}
-
-.has-header-image .custom-header-media img {
-	max-width: 1380px;
-	vertical-align: top;
-	width: 100%;
-}
-
-@media screen and ( min-width: 1381px ) {
-
-	.wp-custom-header {
-		background: url(https://wckyoto2017.github.io/main-image/main-fcfcfc-1800x960.svg) center -90px no-repeat;
-		background-size: 1800px 960px;
-		height: 694px;
-		margin: 20px 0 60px;
-	}
-
-	.wp-custom-header img {
-		display: none;
 	}
 }
