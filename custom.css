@@ -1288,11 +1288,12 @@ a:hover .nav-title,
 
 .navigation-top {
 	background: #fff;
-	font-size: 16px;
-	font-size: 1rem;
+	font-size: 14px;
+	font-size: 0.875rem;
 	position: fixed;
 	top: 0;
-	right: 0;
+	left: 0;
+	width: 100%;
 	z-index: 99;
 }
 
@@ -1338,8 +1339,7 @@ a:hover .nav-title,
 }
 
 .main-navigation > div > ul {
-	border-top: 1px solid #eee;
-	padding: 0.75em 1.695em;
+	padding: 0 55px 0 1em;
 }
 
 .js .main-navigation.toggled-on > div > ul {
@@ -1362,7 +1362,6 @@ a:hover .nav-title,
 }
 
 .main-navigation li {
-	border-bottom: 1px solid #eee;
 	position: relative;
 }
 
