@@ -3128,14 +3128,14 @@ object {
 --------------------------------------------------------------*/
 
 /* Adjust positioning of edit shortcuts, override style in customize-preview.css */
-@media screen and (min-width: 20em) {
+@media screen and (min-width: 320px) {
 
 	body.customize-partial-edit-shortcuts-shown .site-header .site-title {
 		padding-left: 0;
 	}
 }
 
-@media screen and (min-width: 30em) {
+@media screen and (min-width: 480px) {
 
 	/* Typography */
 
@@ -3264,7 +3264,7 @@ object {
 	}
 }
 
-@media screen and (min-width: 48em) {
+@media screen and (min-width: 768px) {
 
 	/* Typography */
 
@@ -4004,7 +4004,7 @@ object {
 	}
 }
 
-@media screen and ( min-width: 67em ) {
+@media screen and ( min-width: 1072px ) {
 
 	/* Layout */
 
@@ -4054,7 +4054,7 @@ object {
 	}
 }
 
-@media screen and ( min-width: 79em ) {
+@media screen and ( min-width: 1264px ) {
 
 	.has-sidebar .entry-content blockquote.alignleft {
 		margin-left: -20%;
@@ -4068,7 +4068,7 @@ object {
 	}
 }
 
-@media screen and ( max-width: 48.875em ) and ( min-width: 48em ) {
+@media screen and ( max-width: 782px ) and ( min-width: 768px ) {
 
 	.admin-bar .site-navigation-fixed.navigation-top,
 	.admin-bar .site-navigation-hidden.navigation-top {
