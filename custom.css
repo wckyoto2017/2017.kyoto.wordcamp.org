@@ -429,7 +429,6 @@ h1 {
 
 h2,
 .home.blog .entry-title {
-	color: #666;
 	font-size: 20px;
 	font-size: 1.25rem;
 	font-weight: 300;
@@ -4096,4 +4095,46 @@ object {
 	.site-footer {
 		padding: 0;
 	}
+}
+
+/*--------------------------------------------------------------
+21.0 WordCamp Kyoto 2017
+--------------------------------------------------------------*/
+
+.home .page-header {
+	display: none;
+}
+
+.sticky .icon-thumb-tack {
+	display: none;
+}
+
+.sticky .entry-header {
+	display: none;
+}
+
+.hero img {
+	vertical-align: top;
+}
+
+.hero .main-image {
+	margin-top: 5px;
+}
+
+.hero .description {
+	font-family: 'Ubuntu Mono', monospace;
+	font-weight: 400;
+	padding-top: 0;
+	margin-top: 1em;
+	text-align: center;
+	text-transform: lowercase;
+}
+
+.hero .date-venue {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.hero .date-venue small {
+	font-family: 'Lato', sans-serif;
 }
