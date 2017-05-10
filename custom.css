@@ -2450,10 +2450,6 @@ body:not(.twentyseventeen-front-page) .entry-header {
 13.6 Footer
 --------------------------------------------------------------*/
 
-.site-footer {
-	border-top: 1px solid #eee;
-}
-
 .site-footer .wrap {
 	padding-bottom: 1.5em;
 	padding-top: 2em;
@@ -2514,10 +2510,20 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	font-size: 14px;
 	font-size: 0.875rem;
 	margin-bottom: 1em;
+	text-align: center;
 }
 
 .site-info a {
-	color: #666;
+	background: url(https://wckyoto2017.github.io/2017.kyoto.wordcamp.org/images/wordpress-logo-line-32x32.svg) no-repeat center center;
+	background-size: contain;
+	display: inline-block;
+	font-size: 0;
+	height: 32px;
+	width: 32px;
+}
+
+.site-info a:hover {
+	background: url(https://wckyoto2017.github.io/2017.kyoto.wordcamp.org/images/wordpress-logo-line-32x32.svg) no-repeat center center;
 }
 
 .site-info .sep {
@@ -3997,9 +4003,7 @@ object {
 	}
 
 	.site-info {
-		float: left;
 		padding: 0.7em 0 0;
-		width: 58%;
 	}
 
 	.social-navigation + .site-info {
