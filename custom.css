@@ -408,8 +408,7 @@ h5,
 h6 {
 	clear: both;
 	line-height: 1.4;
-	margin: 0 0 0.75em;
-	padding: 1.5em 0 0;
+	margin: 1.5em 0 0.75em;
 }
 
 h1:first-child,
@@ -4319,4 +4318,47 @@ object {
 .hero .ticket-button {
 	display: block;
 	text-align: center;
+}
+
+.welcome-title {
+	font-size: 20px;
+	margin-top: 3em;
+	margin-bottom: 1.25em;
+	padding-top: 0;
+	position: relative;
+	text-transform: uppercase;
+	z-index: 2;
+}
+
+.welcome-title:before {
+	content: "Welcome to\AWordCamp\AKyoto 2017";
+}
+
+.welcome-venue-image img {
+	vertical-align: top;
+}
+
+.outline-title {
+	position: relative;
+	z-index: 2;
+}
+
+.outline-title:before {
+	content: "Outline";
+}
+
+.welcome-title:before,
+.outline-title:before {
+	color: #f2f2f2;
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+	font-weight: 900;
+	left: -0.4em;
+	line-height: 1;
+	position: absolute;
+	text-transform: uppercase;
+	top: -0.4em;
+	white-space: pre;
+	z-index: -1;
 }
