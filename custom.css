@@ -3794,14 +3794,6 @@ object {
 		width: 32px;
 	}
 
-	body:not(.has-sidebar):not(.page-one-column) .page-header,
-	body.has-sidebar.error404 #primary .page-header,
-	body.page-two-column:not(.archive) #primary .entry-header,
-	body.page-two-column.archive:not(.has-sidebar) #primary .page-header {
-		float: left;
-		width: 36%;
-	}
-
 	.blog:not(.has-sidebar) #primary article,
 	.archive:not(.page-one-column):not(.has-sidebar) #primary article,
 	.search:not(.has-sidebar) #primary article,
@@ -3809,8 +3801,8 @@ object {
 	.error404.has-sidebar #primary .page-content,
 	body.page-two-column:not(.archive) #primary .entry-content,
 	body.page-two-column #comments {
-		float: right;
-		width: 58%;
+		max-width: 640px;
+		margin: auto;
 	}
 
 	.blog .site-main > article,
