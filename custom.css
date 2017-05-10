@@ -1553,6 +1553,7 @@ a:hover .nav-title,
 	position: absolute;
 	top: 0;
 	right: 0;
+	width: 45px;
 	z-index: 9999;
 }
 
