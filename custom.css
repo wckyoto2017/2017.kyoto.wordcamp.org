@@ -4324,6 +4324,7 @@ object {
 	padding-top: 0;
 	position: relative;
 	text-transform: uppercase;
+	white-space: nowrap;
 	z-index: 2;
 }
 
