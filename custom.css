@@ -804,7 +804,8 @@ html[lang="ja"] input,
 html[lang="ja"] select,
 html[lang="ja"] textarea {
 	font-family: 'Open Sans', "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	font-feature-settings : "palt" 1;
+	font-feature-settings : "pwid" 1;
+	letter-spacing: 0.01em;
 }
 
 html[lang="ja"] h1,
@@ -874,7 +875,7 @@ html[lang="mr-IN"] *,
 html[lang="el"] *,
 html[lang="gu-IN"] *,
 html[lang="he-IL"] *,
-html[lang="ja"] *,
+// html[lang="ja"] *,
 html[lang="ko-KR"] *,
 html[lang="th"] * {
 	letter-spacing: 0;
