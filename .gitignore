@@ -1,7 +1,4 @@
 /*
 !.gitignore
 !/custom.css
-!/assets/
-/assets/*/
-!/assets/images/
-!/images/
+!/images
