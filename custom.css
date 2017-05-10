@@ -878,7 +878,7 @@ html[lang="he-IL"] *,
 html[lang="ja"] *,
 html[lang="ko-KR"] *,
 html[lang="th"] * {
-	letter-spacing: 0 !important;
+	letter-spacing: 0;
 }
 
 /*--------------------------------------------------------------
@@ -963,24 +963,50 @@ input[type="checkbox"] + label {
 
 button,
 input[type="button"],
-input[type="submit"] {
-	background-color: #222;
-	border: 0;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
+input[type="submit"],
+.button {
+	background: transparent;
+	border: 1px solid #333;
 	-webkit-box-shadow: none;
 	box-shadow: none;
-	color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 14px;
 	font-size: 0.875rem;
-	font-weight: 800;
 	line-height: 1;
 	padding: 1em 2em;
+	position: relative;
 	text-shadow: none;
 	-webkit-transition: background 0.2s;
 	transition: background 0.2s;
+	-ms-transform: translateX(-3px) translateY(-3px);
+	-moz-transform: translateX(-3px) translateY(-3px);
+	-webkit-transform: translateX(-3px) translateY(-3px);
+	transform: translateX(-3px) translateY(-3px);
+}
+
+button:before,
+input[type="button"]:before,
+input[type="submit"]:before,
+.button:before {
+	border: 1px solid #333;
+	border-top: none;
+	border-left: none;
+	bottom: -4px;
+	box-sizing: content-box;
+	content: "";
+	height: 100%;
+	position: absolute;
+	right: -4px;
+	width: 100%;
+	z-index: 0;
+}
+
+html[lang="ja"] button,
+html[lang="ja"] input[type="button"],
+html[lang="ja"] input[type="submit"],
+html[lang="ja"] .button {
+	letter-spacing: 0.05em;
 }
 
 input + button,
@@ -994,30 +1020,88 @@ input[type="reset"],
 input[type="button"].secondary,
 input[type="reset"].secondary,
 input[type="submit"].secondary {
-	background-color: #ddd;
-	color: #222;
+	// background-color: #ddd;
+	// color: #222;
 }
 
 button:hover,
-button:focus,
 input[type="button"]:hover,
-input[type="button"]:focus,
 input[type="submit"]:hover,
-input[type="submit"]:focus {
-	background: #767676;
+.button:hover {
+	-ms-transform: translateX(-2px) translateY(-2px);
+	-moz-transform: translateX(-2px) translateY(-2px);
+	-webkit-transform: translateX(-2px) translateY(-2px);
+	transform: translateX(-2px) translateY(-2px);
+}
+
+button:hover:before,
+input[type="button"]:hover:before,
+input[type="submit"]:hover:before,
+.button:hover:before {
+	bottom: -3px;
+	right: -3px;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="submit"]:focus,
+.button:focus {
+	transform: translateX(0) translateY(0);
+}
+
+button:focus:before,
+input[type="button"]:focus:before,
+input[type="submit"]:focus:before,
+.button:focus:before {
+	display: none;
 }
 
 button.secondary:hover,
-button.secondary:focus,
 input[type="reset"]:hover,
-input[type="reset"]:focus,
 input[type="button"].secondary:hover,
-input[type="button"].secondary:focus,
 input[type="reset"].secondary:hover,
-input[type="reset"].secondary:focus,
-input[type="submit"].secondary:hover,
-input[type="submit"].secondary:focus {
-	background: #bbb;
+input[type="submit"].secondary:hover {
+	// background: #bbb;
+}
+
+.button-heavy {
+	border-width: 2px;
+	font-weight: bold;
+	-ms-transform: translateX(-4px) translateY(-4px);
+	-moz-transform: translateX(-4px) translateY(-4px);
+	-webkit-transform: translateX(-4px) translateY(-4px);
+	transform: translateX(-4px) translateY(-4px);
+}
+
+.button-heavy:before {
+	border-width: 2px;
+	bottom: -6px;
+	right: -6px;
+}
+
+.button-heavy:hover {
+	-ms-transform: translateX(-3px) translateY(-3px);
+	-moz-transform: translateX(-3px) translateY(-3px);
+	-webkit-transform: translateX(-3px) translateY(-3px);
+	transform: translateX(-3px) translateY(-3px);
+}
+
+.button-heavy:hover:before {
+	bottom: -5px;
+	right: -5px;
+}
+
+.button-heavy:focus {
+	transform: translateX(0) translateY(0);
+}
+
+.button-large {
+	font-size: 16px;
+}
+
+.button-block {
+	display: block;
+	text-align: center;
 }
 
 /* Placeholder text color -- selectors need to be separate to work. */
@@ -1147,12 +1231,7 @@ a:active {
 .site-footer .widget-area a,
 .posts-navigation a,
 .widget_authors a strong {
-	-webkit-box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
-	box-shadow: inset 0 -1px 0 rgba(15, 15, 15, 1);
-	-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+	background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.3) 0%);
 }
 
 .entry-title a,
@@ -1177,13 +1256,38 @@ a .nav-title,
 .widget ul li a,
 .site-footer .widget-area ul li a,
 .site-footer .widget-area ul li a {
-	-webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 1);
-	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 1);
-	text-decoration: none;
-	-webkit-transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, -webkit-box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
-	transition: color 80ms ease-in, box-shadow 130ms ease-in-out, -webkit-box-shadow 130ms ease-in-out;
+	background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.3) 0%);
+}
+
+.entry-content .button,
+.entry-summary .button,
+.widget .button,
+.site-footer .widget-area .button,
+.posts-navigation .button,
+.widget_authors a strong,
+.entry-title .button,
+.entry-meta .button,
+.page-links .button,
+.page-links a .page-number,
+.entry-footer .button,
+.entry-footer .cat-links .button,
+.entry-footer .tags-links .button,
+.edit-link .button,
+.post-navigation .button,
+.logged-in-as .button,
+.comment-navigation .button,
+.comment-metadata .button,
+.comment-metadata a.comment-edit-link,
+.comment-reply-link,
+a .nav-title,
+.pagination .button,
+.comments-pagination .button,
+.site-info .button,
+.widget .widget-title .button,
+.widget ul li .button,
+.site-footer .widget-area ul li .button,
+.site-footer .widget-area ul li .button {
+	background: transparent;
 }
 
 .entry-content a:focus,
@@ -1234,9 +1338,58 @@ a:hover .nav-title,
 .widget .widget-title a:hover,
 .widget ul li a:focus,
 .widget ul li a:hover {
-	color: #000;
-	-webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
-	box-shadow: inset 0 0 0 rgba(0, 0, 0, 0), 0 3px 0 rgba(0, 0, 0, 1);
+	background: linear-gradient(transparent 0%, rgba(255, 235, 59, 0.3) 0%);
+}
+
+.entry-content .button:focus,
+.entry-content .button:hover,
+.entry-summary .button:focus,
+.entry-summary .button:hover,
+.widget .button:focus,
+.widget .button:hover,
+.site-footer .widget-area .button:focus,
+.site-footer .widget-area .button:hover,
+.posts-navigation .button:focus,
+.posts-navigation .button:hover,
+.comment-metadata .button:focus,
+.comment-metadata .button:hover,
+.comment-metadata a.comment-edit-link:focus,
+.comment-metadata a.comment-edit-link:hover,
+.comment-reply-link:focus,
+.comment-reply-link:hover,
+.widget_authors .button:focus strong,
+.widget_authors .button:hover strong,
+.entry-title .button:focus,
+.entry-title .button:hover,
+.entry-meta .button:focus,
+.entry-meta .button:hover,
+.page-links .button:focus .page-number,
+.page-links .button:hover .page-number,
+.entry-footer .button:focus,
+.entry-footer .button:hover,
+.entry-footer .cat-links .button:focus,
+.entry-footer .cat-links .button:hover,
+.entry-footer .tags-links .button:focus,
+.entry-footer .tags-links .button:hover,
+.post-navigation .button:focus,
+.post-navigation .button:hover,
+.pagination .button:not(.prev):not(.next):focus,
+.pagination .button:not(.prev):not(.next):hover,
+.comments-pagination .button:not(.prev):not(.next):focus,
+.comments-pagination .button:not(.prev):not(.next):hover,
+.logged-in-as .button:focus,
+.logged-in-as .button:hover,
+.button:focus .nav-title,
+.button:hover .nav-title,
+.edit-link .button:focus,
+.edit-link .button:hover,
+.site-info .button:focus,
+.site-info .button:hover,
+.widget .widget-title .button:focus,
+.widget .widget-title .button:hover,
+.widget ul li .button:focus,
+.widget ul li .button:hover {
+	background: transparent;
 }
 
 /* Fixes linked images */
@@ -1403,6 +1556,17 @@ a:hover .nav-title,
 	z-index: 9999;
 }
 
+.menu-toggle,
+.menu-toggle:hover,
+.menu-toggle:focus {
+	transform: translateX(0) translateY(0);
+}
+
+.menu-toggle:before {
+	content: none;
+	display: none;
+}
+
 /* Display the menu toggle when JavaScript is available. */
 
 .js .menu-toggle {
@@ -1452,6 +1616,17 @@ a:hover .nav-title,
 	position: absolute;
 	text-shadow: none;
 	top: 0;
+}
+
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	transform: translateX(0) translateY(0);
+}
+
+.dropdown-toggle:before {
+	content: none;
+	display: none;
 }
 
 .dropdown-toggle .icon {
@@ -1508,8 +1683,8 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 700px;
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 
 .wrap:after {
@@ -4133,8 +4308,14 @@ object {
 .hero .date-venue {
 	text-align: center;
 	text-transform: uppercase;
+	margin-bottom: 2em;
 }
 
 .hero .date-venue small {
 	font-family: 'Lato', sans-serif;
+}
+
+.hero .ticket-button {
+	display: block;
+	text-align: center;
 }
