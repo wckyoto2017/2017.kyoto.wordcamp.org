@@ -1,3 +1,6 @@
-*
+/*
 !.gitignore
-!custom.css
+!/custom.css
+!/assets/
+/assets/*/
+!/assets/images/
