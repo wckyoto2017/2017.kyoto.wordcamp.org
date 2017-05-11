@@ -540,14 +540,20 @@ i {
 }
 
 blockquote {
-	color: #666;
-	font-size: 18px;
-	font-size: 1.125rem;
-	font-style: italic;
-	line-height: 1.7;
-	margin: 0;
+	border-left: 4px solid #ddd;
+	color: #999;
+	// font-size: 18px;
+	// font-size: 1.125rem;
+	// font-style: italic;
+	// line-height: 1.7;
+	margin: 0 0 1.5em;
 	overflow: hidden;
 	padding: 0;
+	padding-left: 1em;
+
+	*:last-child {
+		margin-bottom: 0;
+	}
 }
 
 blockquote cite {
