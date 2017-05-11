@@ -420,6 +420,18 @@ h6:first-child {
 	padding-top: 0;
 }
 
+.entry-content {
+
+	> h1:first-child,
+	> h2:first-child,
+	> h3:first-child,
+	> h4:first-child,
+	> h5:first-child,
+	> h6:first-child {
+		margin-top: 0;
+	}
+}
+
 h1 {
 	font-size: 24px;
 	font-size: 1.5rem;
@@ -435,6 +447,7 @@ h2,
 
 .entry-title {
 	text-transform: uppercase;
+	margin-top: 0;
 }
 
 .home.blog {
@@ -2089,7 +2102,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 }
 
 .site-content {
-	padding: 2.5em 0 0;
+	padding: 3.5em 0 0;
 }
 
 /*--------------------------------------------------------------
@@ -2119,9 +2132,9 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .page-title,
 body.page:not(.twentyseventeen-front-page) .entry-title {
 	// color: #222;
-	font-size: 14px;
-	font-size: 0.875rem;
-	font-weight: 800;
+	// font-size: 14px;
+	// font-size: 0.875rem;
+	font-weight: 600;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 }
@@ -2316,8 +2329,9 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .single-featured-image-header {
-	background-color: #fafafa;
-	border-bottom: 1px solid #eee;
+	// background-color: #fafafa;
+	// border-bottom: 1px solid #eee;
+	// padding-top: 4em;
 }
 
 .single-featured-image-header img {
@@ -3690,8 +3704,8 @@ object {
 
 	.single-post .entry-title,
 	.page .entry-title {
-		font-size: 26px;
-		font-size: 1.625rem;
+		font-size: 32px;
+		// font-size: 1.625rem;
 	}
 
 	.comments-pagination,
@@ -4168,8 +4182,12 @@ object {
 }
 
 @media screen and ( min-width: 1920px ) {
-	.site-content {
-		padding: 7em 0 0;
+
+	div:not(.single-featured-image-header) + .site-content-contain {
+
+		.site-content {
+			padding: 7em 0 0;
+		}
 	}
 }
 
