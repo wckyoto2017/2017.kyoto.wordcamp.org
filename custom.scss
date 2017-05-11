@@ -2518,16 +2518,16 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 .site-info a {
-	background: url(https://wckyoto2017.github.io/2017.kyoto.wordcamp.org/images/wordpress-logo-line-32x32.svg) no-repeat center center;
+	background: url(https://wckyoto2017.github.io/2017.kyoto.wordcamp.org/images/wordpress-logo-line-64x64.svg) no-repeat center center;
 	background-size: contain;
 	display: inline-block;
 	font-size: 0;
-	height: 32px;
-	width: 32px;
+	height: 64px;
+	width: 64px;
 }
 
 .site-info a:hover {
-	background: url(https://wckyoto2017.github.io/2017.kyoto.wordcamp.org/images/wordpress-logo-line-32x32.svg) no-repeat center center;
+	background: url(https://wckyoto2017.github.io/2017.kyoto.wordcamp.org/images/wordpress-logo-line-64x64.svg) no-repeat center center;
 }
 
 .site-info .sep {
@@ -3902,7 +3902,7 @@ object {
 	.navigation-top {
 		height: 0; /* to hack JavaScript */
 		overflow: visible;
-		top: 50px;
+		top: 40px;
 		width: auto;
 	}
 
@@ -3912,7 +3912,7 @@ object {
 	}
 
 	.admin-bar .site-navigation-fixed.navigation-top {
-		top: 82px;
+		top: 72px;
 	}
 
 	/* Main Navigation */
@@ -3935,13 +3935,20 @@ object {
 	.main-navigation ul {
 		background: transparent;
 		padding: 0;
+
+		&:hover {
+			background: #fff;
+
+			ul {
+				background: #fff;
+			}
+		}
 	}
 
 	.main-navigation > div > ul {
 		background: transparent;
 		border: 0;
 		margin-bottom: 0;
-		padding: 0;
 		padding-left: 20px;
 	}
 
@@ -4298,6 +4305,41 @@ object {
 
 .hero {
 
+	@media screen and ( min-width: 1600px ) {
+		align-content: center;
+		align-items: center;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+
+		.branding {
+			margin-left: 60px;
+		}
+
+		.info {
+			justify-content: space-between;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	@media screen and ( min-width: 1920px ) {
+
+		.branding {
+			margin-left: 100px;
+		}
+	}
+
 	img {
 		vertical-align: top;
 	}
@@ -4314,6 +4356,11 @@ object {
 			margin-top: 2.5em;
 			margin-bottom: 1.5em;
 		}
+
+		@media screen and ( min-width: 1600px ) {
+			margin-top: 5em;
+			text-align: left;
+		}
 	}
 
 	.description {
@@ -4327,20 +4374,36 @@ object {
 		@media screen and ( min-width: 768px ) {
 			margin-bottom: 1.5em;
 		}
+
+		@media screen and ( min-width: 1600px ) {
+			text-align: left;
+		}
 	}
 
 	.date-venue {
+		font-weight: 600;
+		letter-spacing: 0.05em;
+		margin-bottom: 2em;
 		text-align: center;
 		text-transform: uppercase;
-		margin-bottom: 2em;
+
+		@media screen and ( min-width: 480px ) {
+			font-size: 16px;
+		}
 
 		@media screen and ( min-width: 768px ) {
 			margin-bottom: 3em;
 		}
-	}
 
-	.date-venue small {
-		font-family: 'Lato', sans-serif;
+		@media screen and ( min-width: 1600px ) {
+			margin-bottom: 0;
+			text-align: left;
+		}
+
+		small {
+			font-family: 'Lato', sans-serif;
+			letter-spacing: 0;
+		}
 	}
 
 	.ticket-button {
@@ -4348,6 +4411,10 @@ object {
 		margin: auto;
 		max-width: 320px;
 		text-align: center;
+
+		@media screen and ( min-width: 1600px ) {
+			min-width: 240px;
+		}
 	}
 }
 
