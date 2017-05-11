@@ -423,21 +423,85 @@ h6:first-child {
 h1 {
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-weight: 300;
+	font-weight: 600;
 }
 
 h2,
 .home.blog .entry-title {
 	font-size: 20px;
 	font-size: 1.25rem;
-	font-weight: 300;
+	font-weight: 600;
+}
+
+.entry-title {
+	text-transform: uppercase;
+}
+
+.home.blog {
+
+	.entry-title {
+		position: relative;
+		z-index: 1;
+
+		&:before {
+			content: "News";
+			font-weight: 900;
+			text-transform: uppercase;
+
+			color: #f2f2f2;
+			display: block;
+			font-family: 'Roboto', sans-serif;
+			font-size: 40px;
+			font-weight: 900;
+			left: -0.4em;
+			line-height: 1;
+			position: absolute;
+			text-transform: uppercase;
+			top: -0.4em;
+			white-space: pre;
+			z-index: -1;
+
+			@media screen and ( min-width: 480px ) {
+				font-size: 60px;
+				top: -0.5em;
+			}
+
+			@media screen and ( min-width: 640px ) {
+				font-size: 100px;
+				top: -0.6em;
+			}
+
+			@media screen and ( min-width: 1280px ) {
+				left: -1em;
+				top: -0.4em;
+			}
+		}
+	}
+
+	@media screen and ( min-width: 1280px ) {
+
+		.post {
+
+			&:nth-child(even) {
+
+				.entry-title:before {
+					right: -1em;
+					left: auto;
+				}
+			}
+		}
+	}
+}
+
+.entry-meta + .entry-title {
+	margin-top: 0.1em;
 }
 
 h3 {
 	color: #333;
 	font-size: 18px;
 	font-size: 1.125rem;
-	font-weight: 300;
+	font-weight: 600;
 }
 
 h4 {
@@ -1234,7 +1298,58 @@ a:active {
 	background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.3) 0%);
 }
 
-.entry-title a,
+.entry-content a:focus,
+.entry-content a:hover,
+.entry-summary a:focus,
+.entry-summary a:hover,
+.widget a:focus,
+.widget a:hover,
+.site-footer .widget-area a:focus,
+.site-footer .widget-area a:hover,
+.posts-navigation a:focus,
+.posts-navigation a:hover,
+.comment-metadata a:focus,
+.comment-metadata a:hover,
+.comment-metadata a.comment-edit-link:focus,
+.comment-metadata a.comment-edit-link:hover,
+.comment-reply-link:focus,
+.comment-reply-link:hover,
+.widget_authors a:focus strong,
+.widget_authors a:hover strong {
+	background: linear-gradient(transparent 0%, rgba(255, 235, 59, 0.3) 0%);
+}
+
+.entry-content .button,
+.entry-summary .button,
+.widget .button,
+.site-footer .widget-area .button,
+.posts-navigation .button,
+.widget_authors a strong {
+	background: transparent;
+}
+
+.entry-content .button:focus,
+.entry-content .button:hover,
+.entry-summary .button:focus,
+.entry-summary .button:hover,
+.widget .button:focus,
+.widget .button:hover,
+.site-footer .widget-area .button:focus,
+.site-footer .widget-area .button:hover,
+.posts-navigation .button:focus,
+.posts-navigation .button:hover,
+.comment-metadata .button:focus,
+.comment-metadata .button:hover,
+.comment-metadata a.comment-edit-link:focus,
+.comment-metadata a.comment-edit-link:hover,
+.comment-reply-link:focus,
+.comment-reply-link:hover,
+.widget_authors .button:focus strong,
+.widget_authors .button:hover strong {
+	background: transparent;
+}
+
+// .entry-title a,
 .entry-meta a,
 .page-links a,
 .page-links a .page-number,
@@ -1259,59 +1374,10 @@ a .nav-title,
 	background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.3) 0%);
 }
 
-.entry-content .button,
-.entry-summary .button,
-.widget .button,
-.site-footer .widget-area .button,
-.posts-navigation .button,
-.widget_authors a strong,
-.entry-title .button,
-.entry-meta .button,
-.page-links .button,
-.page-links a .page-number,
-.entry-footer .button,
-.entry-footer .cat-links .button,
-.entry-footer .tags-links .button,
-.edit-link .button,
-.post-navigation .button,
-.logged-in-as .button,
-.comment-navigation .button,
-.comment-metadata .button,
-.comment-metadata a.comment-edit-link,
-.comment-reply-link,
-a .nav-title,
-.pagination .button,
-.comments-pagination .button,
-.site-info .button,
-.widget .widget-title .button,
-.widget ul li .button,
-.site-footer .widget-area ul li .button,
-.site-footer .widget-area ul li .button {
-	background: transparent;
-}
-
-.entry-content a:focus,
-.entry-content a:hover,
-.entry-summary a:focus,
-.entry-summary a:hover,
-.widget a:focus,
-.widget a:hover,
-.site-footer .widget-area a:focus,
-.site-footer .widget-area a:hover,
-.posts-navigation a:focus,
-.posts-navigation a:hover,
-.comment-metadata a:focus,
-.comment-metadata a:hover,
-.comment-metadata a.comment-edit-link:focus,
-.comment-metadata a.comment-edit-link:hover,
-.comment-reply-link:focus,
-.comment-reply-link:hover,
-.widget_authors a:focus strong,
-.widget_authors a:hover strong,
-.entry-title a:focus,
-.entry-title a:hover,
 .entry-meta a:focus,
 .entry-meta a:hover,
+.page-links a:focus,
+.page-links a:hover,
 .page-links a:focus .page-number,
 .page-links a:hover .page-number,
 .entry-footer a:focus,
@@ -1320,76 +1386,35 @@ a .nav-title,
 .entry-footer .cat-links a:hover,
 .entry-footer .tags-links a:focus,
 .entry-footer .tags-links a:hover,
-.post-navigation a:focus,
-.post-navigation a:hover,
-.pagination a:not(.prev):not(.next):focus,
-.pagination a:not(.prev):not(.next):hover,
-.comments-pagination a:not(.prev):not(.next):focus,
-.comments-pagination a:not(.prev):not(.next):hover,
-.logged-in-as a:focus,
-.logged-in-as a:hover,
-a:focus .nav-title,
-a:hover .nav-title,
 .edit-link a:focus,
 .edit-link a:hover,
+.post-navigation a:focus,
+.post-navigation a:hover,
+.logged-in-as a:focus,
+.logged-in-as a:hover,
+.comment-navigation a:focus,
+.comment-navigation a:hover,
+.comment-metadata a:focus,
+.comment-metadata a:hover,
+.comment-metadata a:focus.comment-edit-link,
+.comment-metadata a:hover.comment-edit-link,
+.comment-reply-link:focus,
+.comment-reply-link:hover,
+a:focus .nav-title,
+a:hover .nav-title,
+.pagination a:focus,
+.pagination a:hover,
+.comments-pagination a:focus,
+.comments-pagination a:hover,
 .site-info a:focus,
 .site-info a:hover,
 .widget .widget-title a:focus,
 .widget .widget-title a:hover,
 .widget ul li a:focus,
-.widget ul li a:hover {
+.widget ul li a:hover,
+.site-footer .widget-area ul li a:focus,
+.site-footer .widget-area ul li a:hover {
 	background: linear-gradient(transparent 0%, rgba(255, 235, 59, 0.3) 0%);
-}
-
-.entry-content .button:focus,
-.entry-content .button:hover,
-.entry-summary .button:focus,
-.entry-summary .button:hover,
-.widget .button:focus,
-.widget .button:hover,
-.site-footer .widget-area .button:focus,
-.site-footer .widget-area .button:hover,
-.posts-navigation .button:focus,
-.posts-navigation .button:hover,
-.comment-metadata .button:focus,
-.comment-metadata .button:hover,
-.comment-metadata a.comment-edit-link:focus,
-.comment-metadata a.comment-edit-link:hover,
-.comment-reply-link:focus,
-.comment-reply-link:hover,
-.widget_authors .button:focus strong,
-.widget_authors .button:hover strong,
-.entry-title .button:focus,
-.entry-title .button:hover,
-.entry-meta .button:focus,
-.entry-meta .button:hover,
-.page-links .button:focus .page-number,
-.page-links .button:hover .page-number,
-.entry-footer .button:focus,
-.entry-footer .button:hover,
-.entry-footer .cat-links .button:focus,
-.entry-footer .cat-links .button:hover,
-.entry-footer .tags-links .button:focus,
-.entry-footer .tags-links .button:hover,
-.post-navigation .button:focus,
-.post-navigation .button:hover,
-.pagination .button:not(.prev):not(.next):focus,
-.pagination .button:not(.prev):not(.next):hover,
-.comments-pagination .button:not(.prev):not(.next):focus,
-.comments-pagination .button:not(.prev):not(.next):hover,
-.logged-in-as .button:focus,
-.logged-in-as .button:hover,
-.button:focus .nav-title,
-.button:hover .nav-title,
-.edit-link .button:focus,
-.edit-link .button:hover,
-.site-info .button:focus,
-.site-info .button:hover,
-.widget .widget-title .button:focus,
-.widget .widget-title .button:hover,
-.widget ul li .button:focus,
-.widget ul li .button:hover {
-	background: transparent;
 }
 
 /* Fixes linked images */
@@ -1409,7 +1434,11 @@ a:hover .nav-title,
 --------------------------------------------------------------*/
 
 .post-thumbnail {
-	margin-bottom: 1em;
+	margin-bottom: 2em;
+
+	img {
+		vertical-align: top;
+	}
 }
 
 .post-thumbnail a img {
@@ -2083,7 +2112,7 @@ body:not(.has-header-image):not(.has-header-video) .custom-header-media {
 .page .panel-content .entry-title,
 .page-title,
 body.page:not(.twentyseventeen-front-page) .entry-title {
-	color: #222;
+	// color: #222;
 	font-size: 14px;
 	font-size: 0.875rem;
 	font-weight: 800;
@@ -2092,7 +2121,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .entry-header .entry-title {
-	margin-bottom: 0.25em;
+	margin-bottom: 1em;
 }
 
 .entry-title a {
@@ -2112,7 +2141,9 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	font-weight: 800;
 	letter-spacing: 0.1818em;
 	padding-bottom: 0.25em;
+	position: relative;
 	text-transform: uppercase;
+	z-index: 2;
 }
 
 .entry-meta a {
@@ -4324,11 +4355,9 @@ object {
 
 .sticky {
 
-	.icon-thumb-tack {
-		display: none;
-	}
-
-	.entry-header {
+	.icon-thumb-tack,
+	.entry-header,
+	.post-thumbnail {
 		display: none;
 	}
 }
@@ -4624,5 +4653,23 @@ object {
 	.entry-header,
 	.entry-footer {
 		display: none;
+	}
+}
+
+hr#news {
+	background: transparent;
+	height: 0;
+	margin: 2em 0 0;
+
+	@media screen and ( min-width: 480px ) {
+		margin-top: 3em;
+	}
+
+	@media screen and ( min-width: 640px ) {
+		margin-top: 4em;
+	}
+
+	@media screen and ( min-width: 1280px ) {
+		margin-top: 8em;
 	}
 }
