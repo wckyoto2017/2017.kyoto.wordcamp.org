@@ -3900,7 +3900,7 @@ object {
 	/* Navigation */
 
 	.navigation-top {
-		height: 0; /* to hack JavaScript */
+		// height: 0; /* to hack JavaScript */
 		overflow: visible;
 		top: 40px;
 		width: auto;
@@ -4078,7 +4078,7 @@ object {
 
 	.site-header .menu-scroll-down {
 		bottom: 10px;
-		display: block;
+		// display: block;
 		left: 50%;
 		padding: 1em;
 		position: fixed;
@@ -4489,6 +4489,10 @@ object {
 		br {
 			display: none;
 		}
+	}
+
+	@media screen and ( min-width: 1600px ) {
+		margin-top: 7em;
 	}
 
 	&:before {
