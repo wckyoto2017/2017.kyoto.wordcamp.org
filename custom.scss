@@ -1525,7 +1525,11 @@ a:hover .nav-title,
 
 			&:before {
 				background: #c00;
-				margin-right: -0.5em;
+				margin-right: 0;
+
+				@media screen and ( min-width: 1024px ) {
+					margin-right: -0.5em;
+				}
 			}
 
 			&:hover {
