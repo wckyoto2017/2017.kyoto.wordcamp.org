@@ -1543,6 +1543,10 @@ a:hover .nav-title,
 			padding-right: calc( 1em - 2px );
 			margin: 1em 0.5em 0;
 
+			@media screen and ( min-width: 1024px ) {
+				display: inline-block;
+			}
+
 			&:before {
 				background: #c00;
 				margin-right: 0;
