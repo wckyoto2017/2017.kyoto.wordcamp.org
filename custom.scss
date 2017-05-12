@@ -4750,11 +4750,46 @@ hr#news {
 		flex-flow: row wrap;
 	}
 
+	.tix-columns-3 li {
+		width: 50%;
+
+		@media screen and ( min-width: 480px ) {
+			width: 33.33%;
+		}
+	}
+
 	li {
 		float: none;
+		height: auto;
+		padding: 0.5em;
+		text-align: center;
+		width: 210px;
+
+		@media screen and ( min-width: 480px ) {
+			padding: 1em;
+		}
+	}
+
+	.avatar {
+		border-radius: 96px;
+		float: none;
+		height: auto;
+		overflow: hidden;
+
+		@media screen and ( min-width: 480px ) {
+			width: 96px;
+		}
+	}
+
+	.tix-attendee-name {
+		font-weight: 600;
 	}
 
 	.tix-field {
+		margin-left: 0;
+	}
+
+	a.tix-field {
 		display: inline-block;
 	}
 }
