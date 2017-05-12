@@ -1534,6 +1534,18 @@ a:hover .nav-title,
 		}
 	}
 
+	.sub-menu {
+
+		.current-menu-item,
+		.current_page_item {
+
+			> a:before {
+				content: none;
+				display: none;
+			}
+		}
+	}
+
 	.ticket {
 
 		a {
