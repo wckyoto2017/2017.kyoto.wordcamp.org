@@ -4738,3 +4738,23 @@ hr#news {
 		margin-top: 8em;
 	}
 }
+
+#tix-attendees {
+
+	ul {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-flow: row wrap;
+	}
+
+	li {
+		float: none;
+	}
+
+	.tix-field {
+		display: inline-block;
+	}
+}
