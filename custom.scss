@@ -631,7 +631,7 @@ blockquote:after {
 }
 
 :focus {
-	outline: thin dotted;
+	// outline: none;
 }
 
 /* Typography for Arabic Font */
@@ -1321,7 +1321,7 @@ a {
 	text-decoration: none;
 }
 
-a:focus,
+// a:focus,
 a:hover,
 a:active {
 	outline: 0;
