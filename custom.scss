@@ -432,16 +432,10 @@ h6:first-child {
 	}
 }
 
+.home.blog .entry-title,
 h1 {
 	font-size: 24px;
 	font-size: 1.5rem;
-	font-weight: 600;
-}
-
-h2,
-.home.blog .entry-title {
-	font-size: 20px;
-	font-size: 1.25rem;
 	font-weight: 600;
 }
 
@@ -508,6 +502,12 @@ h2,
 
 .entry-meta + .entry-title {
 	margin-top: 0.1em;
+}
+
+h2 {
+	font-size: 20px;
+	font-size: 1.25rem;
+	font-weight: 600;
 }
 
 h3 {
@@ -583,13 +583,13 @@ address {
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	// font-size: 15px;
+	// font-size: 0.9375rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
-	padding: 1.6em;
+	padding: 1em 1.25em;
 }
 
 code,
@@ -597,8 +597,8 @@ kbd,
 tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	font-size: 15px;
-	font-size: 0.9375rem;
+	// font-size: 15px;
+	// font-size: 0.9375rem;
 }
 
 abbr,
@@ -3430,14 +3430,14 @@ object {
 
 	/* Typography */
 
+	.home.blog .entry-title,
+	.page .panel-content .recent-posts .entry-title,
 	h1 {
 		font-size: 30px;
 		font-size: 1.875rem;
 	}
 
-	h2,
-	.home.blog .entry-title,
-	.page .panel-content .recent-posts .entry-title {
+	h2 {
 		font-size: 26px;
 		font-size: 1.625rem;
 	}
