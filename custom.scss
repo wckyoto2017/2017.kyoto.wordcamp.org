@@ -1302,13 +1302,13 @@ td {
 	padding: 0.4em;
 }
 
-th:first-child,
-td:first-child {
+th:first-child:not(.wcpt-time),
+td:first-child:not(.wcpt-time) {
 	padding-left: 0;
 }
 
-th:last-child,
-td:last-child {
+th:last-child:not([class^='wcpt-']):not([class*=' wcpt-']),
+td:last-child:not([class^='wcpt-']):not([class*=' wcpt-']) {
 	padding-right: 0;
 }
 
@@ -4808,5 +4808,157 @@ hr#news {
 
 	a.tix-field {
 		display: inline-block;
+	}
+}
+
+@media screen and ( min-width: 1360px ) {
+
+	.page.page-one-column:not(.twentyseventeen-front-page).page-id-7 #primary {
+		max-width: 960px;
+
+		article {
+			max-width: none;
+		}
+	}
+}
+
+.wcpt-schedule {
+
+	thead {
+
+		th,
+		th:first-child {
+			border: 2px solid #eee;
+			border-left-width: 0;
+			border-right-width: 0;
+			color: #999;
+			font-size: 16px;
+			font-weight: normal;
+			padding: 10px;
+			text-align: center;
+		}
+	}
+
+	tbody {
+
+		@media screen and ( min-width: 701px ) {
+
+			tr {
+				border: 0;
+
+				&:nth-child(odd) {
+					background: #f6f6f6;
+
+					td {
+
+						&:not(:first-child){
+							border-left-color: #fff;
+						}
+
+						&:not(:last-child) {
+							border-right-color: #fff;
+						}
+					}
+				}
+			}
+
+			td {
+				border: 1px solid #f6f6f6;
+				border-top-width: 0;
+				border-bottom-width: 0;
+				padding: 15px;
+
+				&:not(.wcpt-time) {
+					vertical-align: top;
+				}
+			}
+		}
+
+	}
+
+	td {
+		text-align: left !important;
+	}
+
+	a.wcpt-session-title {
+		background: transparent;
+		font-weight: 600;
+
+		&:hover,
+		&:focus {
+			background: transparent;
+			color: #999;
+		}
+	}
+
+	.wcpt-session-title {
+		font-size: 16px;
+		line-height: 1.25;
+	}
+
+	span.wcpt-session-speakers {
+
+		@media screen and ( min-width: 701px ) {
+
+			&:before {
+				content: "";
+				display: block;
+			}
+		}
+	}
+}
+
+@media screen and ( max-width: 700px ) {
+
+	.wcpt-schedule {
+
+		tr {
+			border: none;
+		}
+
+		td {
+			border: 0 solid #ccc;
+			border-left-width: 1px;
+			border-right-width: 1px;
+			margin-bottom: 0;
+			padding: 0;
+
+			&:last-child {
+				border-bottom-width: 1px;
+			}
+		}
+
+		.wcpt-time {
+			border: none;
+			font-weight: 600;
+			padding: 0;
+			text-align: left;
+
+			+ td {
+				border-top-width: 1px;
+			}
+		}
+
+		.wcpt-session-title {
+			padding: 15px;
+		}
+	}
+
+	.wcpt-session-type-session:before {
+		background: #f0f0f0;
+		border: none;
+		color: #999;
+		font-size: 13px;
+		margin-bottom: 0;
+		padding: 10px 15px;
+	}
+
+	span.wcpt-session-speakers {
+		margin-top: -5px;
+		padding: 0 15px 15px 25px;
+
+		a {
+			color: inherit;
+		}
 	}
 }
