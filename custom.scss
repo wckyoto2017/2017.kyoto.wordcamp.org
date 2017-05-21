@@ -1404,7 +1404,7 @@ a:active {
 .comment-metadata a.comment-edit-link,
 .comment-reply-link,
 a .nav-title,
-.pagination a,
+// .pagination a,
 .comments-pagination a,
 .site-info a,
 .widget .widget-title a,
@@ -1442,8 +1442,8 @@ a .nav-title,
 .comment-reply-link:hover,
 a:focus .nav-title,
 a:hover .nav-title,
-.pagination a:focus,
-.pagination a:hover,
+// .pagination a:focus,
+// .pagination a:hover,
 .comments-pagination a:focus,
 .comments-pagination a:hover,
 .site-info a:focus,
@@ -2246,7 +2246,7 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 }
 
 .page-numbers.current {
-	color: #767676;
+	color: #999;
 	display: inline-block;
 }
 
@@ -2258,11 +2258,18 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 	width: auto;
 }
 
+.pagination a {
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
+	min-width: 40px;
+	text-align: center;
+}
+
 .prev.page-numbers,
 .next.page-numbers {
-	background-color: #ddd;
-	// -webkit-border-radius: 2px;
-	// border-radius: 2px;
+	background: transparent;
+	-webkit-border-radius: 40px;
+	border-radius: 40px;
 	display: inline-block;
 	font-size: 24px;
 	font-size: 1.5rem;
@@ -2272,16 +2279,18 @@ body.page:not(.twentyseventeen-front-page) .entry-title {
 
 .prev.page-numbers,
 .next.page-numbers {
-	-webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
-	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+	// -webkit-transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+	// transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
 }
 
+.pagination a:focus,
+.pagination a:hover,
 .prev.page-numbers:focus,
 .prev.page-numbers:hover,
 .next.page-numbers:focus,
 .next.page-numbers:hover {
-	background-color: #767676;
-	color: #fff;
+	background: #eee;
+	// color: #fff;
 }
 
 .prev.page-numbers {
@@ -3801,8 +3810,10 @@ object {
 
 	.navigation.pagination {
 		clear: both;
-		float: right;
-		width: 58%;
+		// float: right;
+		// width: 58%;
+		margin: auto;
+		max-width: 640px;
 	}
 
 	.has-sidebar .navigation.pagination,
@@ -3934,10 +3945,12 @@ object {
 
 	.nav-links .nav-previous .nav-title .nav-title-icon-wrapper {
 		left: -2em;
+		top: -3px;
 	}
 
 	.nav-links .nav-next .nav-title .nav-title-icon-wrapper {
 		right: -2em;
+		top: -3px;
 	}
 
 	/* Secondary */
