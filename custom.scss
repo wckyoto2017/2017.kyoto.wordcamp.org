@@ -1336,6 +1336,10 @@ a:active {
 .posts-navigation a,
 .widget_authors a strong {
 	background: linear-gradient(transparent 60%, rgba(255, 235, 59, 0.3) 0%);
+
+	img {
+		background: #fff;
+	}
 }
 
 .entry-content a:focus,
@@ -1357,6 +1361,10 @@ a:active {
 .widget_authors a:focus strong,
 .widget_authors a:hover strong {
 	background: linear-gradient(transparent 0%, rgba(255, 235, 59, 0.3) 0%);
+
+	img {
+		background: #fff;
+	}
 }
 
 .entry-content .button,
