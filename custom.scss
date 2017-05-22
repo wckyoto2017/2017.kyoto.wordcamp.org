@@ -2370,6 +2370,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 
 /* Single Post */
 
+.single-wcb_session #primary,
 .single-post:not(.has-sidebar) #primary,
 .page.page-one-column:not(.twentyseventeen-front-page) #primary,
 .archive.page-one-column:not(.has-sidebar) .page-header,
@@ -4811,6 +4812,9 @@ hr#news {
 	}
 }
 
+/*--------------------------------------------------------------
+21.2 Timetable
+--------------------------------------------------------------*/
 @media screen and ( min-width: 1360px ) {
 
 	.page.page-one-column:not(.twentyseventeen-front-page).page-id-7 #primary {
@@ -4960,4 +4964,11 @@ hr#news {
 			color: inherit;
 		}
 	}
+}
+
+/*--------------------------------------------------------------
+21.3 Session
+--------------------------------------------------------------*/
+#session-speaker-names {
+	padding-left: 0;
 }
