@@ -451,11 +451,8 @@ h1 {
 		z-index: 1;
 
 		&:before {
-			content: "News";
-			font-weight: 900;
-			text-transform: uppercase;
-
 			color: #f2f2f2;
+			content: "News";
 			display: block;
 			font-family: 'Roboto', sans-serif;
 			font-size: 40px;
@@ -2817,13 +2814,13 @@ body:not(.twentyseventeen-front-page) .entry-header {
 }
 
 h2.widget-title {
-	color: #222;
-	font-size: 13px;
-	font-size: 0.8125rem;
-	font-weight: 800;
+	// color: #222;
+	// font-size: 13px;
+	// font-size: 0.8125rem;
+	// font-weight: 800;
 	// letter-spacing: 0.1818em;
-	margin-bottom: 1.5em;
-	text-transform: uppercase;
+	// margin-bottom: 1.5em;
+	// text-transform: uppercase;
 }
 
 .widget-title a {
@@ -3975,9 +3972,9 @@ object {
 	/* Widgets */
 
 	h2.widget-title {
-		font-size: 11px;
-		font-size: 0.6875rem;
-		margin-bottom: 2em;
+		// font-size: 11px;
+		// font-size: 0.6875rem;
+		// margin-bottom: 2em;
 	}
 
 	/* Footer */
@@ -3990,20 +3987,20 @@ object {
 	}
 
 	.site-footer .widget-column.footer-widget-1 {
-		float: left;
-		width: 36%;
+		// float: left;
+		// width: 36%;
 	}
 
 	.site-footer .widget-column.footer-widget-2 {
-		float: right;
-		width: 58%;
+		// float: right;
+		// width: 58%;
 	}
 
 	.social-navigation {
-		clear: left;
-		float: left;
+		// clear: left;
+		// float: left;
 		margin-bottom: 0;
-		width: 36%;
+		// width: 36%;
 	}
 
 	.site-info {
@@ -4992,3 +4989,114 @@ hr#news {
 		display: none;
 	}
 }
+
+/*--------------------------------------------------------------
+21.4 Sponsor
+--------------------------------------------------------------*/
+.widget-area {
+	margin: auto;
+	max-width: 640px;
+}
+
+h2.widget-title {
+	position: relative;
+	z-index: 1;
+
+	&:before {
+		color: #f2f2f2;
+		display: block;
+		font-family: 'Roboto', sans-serif;
+		font-size: 40px;
+		font-weight: 900;
+		left: -0.4em;
+		line-height: 1;
+		position: absolute;
+		text-transform: uppercase;
+		top: -0.4em;
+		white-space: pre;
+		z-index: -1;
+
+		@media screen and ( min-width: 480px ) {
+			font-size: 60px;
+			top: -0.5em;
+		}
+
+		@media screen and ( min-width: 640px ) {
+			font-size: 100px;
+			top: -0.6em;
+		}
+
+		@media screen and ( min-width: 1280px ) {
+			left: -1em;
+			top: -0.4em;
+		}
+	}
+}
+
+.wcb_widget_sponsors {
+
+	h2.widget-title {
+
+		&:before {
+			content: "Sponsor";
+		}
+	}
+}
+
+.sponsor-level-title {
+	font-family: 'Roboto', sans-serif;
+	margin-top: 3em;
+	text-transform: uppercase;
+}
+
+html[lang="ja"] {
+
+	.sponsor-level-title {
+		font-family: 'Roboto', sans-serif;
+	}
+}
+
+.site-footer {
+
+	.widget-area {
+
+		.sponsor-logo {
+			background: transparent;
+
+			&:focus,
+			&:hover {
+				background: transparent;
+			}
+		}
+	}
+}
+
+.sponsor-level {
+	overflow: hidden;
+
+	.sponsor-logo {
+		float: left;
+	}
+
+	&.gold {
+
+		.sponsor-logo {
+			width: 50%;
+		}
+	}
+
+	&.silver {
+
+		.sponsor-logo {
+			width: 33.33%;
+		}
+	}
+
+	&.bronze {
+
+		.sponsor-logo {
+			width: 25%;
+		}
+	}
+}
+
