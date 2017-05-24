@@ -5041,6 +5041,51 @@ h2.widget-title {
 			content: "Sponsor";
 		}
 	}
+
+	.sponsor-level {
+		overflow: hidden;
+
+		.sponsor-logo {
+			background: #f2f2f2;
+			float: left;
+			padding: 0;
+
+			img {
+				background: transparent;
+				max-height: none;
+			}
+		}
+
+		&.gold {
+
+			.sponsor-logo {
+
+				@media screen and ( min-width: 640px ) {
+					width: 50%;
+				}
+			}
+		}
+
+		&.silver {
+
+			.sponsor-logo {
+
+				@media screen and ( min-width: 640px ) {
+					width: 33.33%;
+				}
+			}
+		}
+
+		&.bronze {
+
+			.sponsor-logo {
+
+				@media screen and ( min-width: 640px ) {
+					width: 25%;
+				}
+			}
+		}
+	}
 }
 
 .sponsor-level-title {
@@ -5055,48 +5100,3 @@ html[lang="ja"] {
 		font-family: 'Roboto', sans-serif;
 	}
 }
-
-.site-footer {
-
-	.widget-area {
-
-		.sponsor-logo {
-			background: transparent;
-
-			&:focus,
-			&:hover {
-				background: transparent;
-			}
-		}
-	}
-}
-
-.sponsor-level {
-	overflow: hidden;
-
-	.sponsor-logo {
-		float: left;
-	}
-
-	&.gold {
-
-		.sponsor-logo {
-			width: 50%;
-		}
-	}
-
-	&.silver {
-
-		.sponsor-logo {
-			width: 33.33%;
-		}
-	}
-
-	&.bronze {
-
-		.sponsor-logo {
-			width: 25%;
-		}
-	}
-}
-
