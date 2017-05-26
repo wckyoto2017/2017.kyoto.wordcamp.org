@@ -4858,14 +4858,18 @@ hr#news {
 			color: #ccc;
 
 			a {
+				cursor: default;
 				background: transparent !important;
 				pointer-events: none;
-				cursor: default;
 
 				&:hover,
 				&:focus {
 					background: transparent !important;
 				}
+			}
+
+			span.wcpt-session-speakers {
+				color: #ccc;
 			}
 		}
 
@@ -4874,6 +4878,10 @@ hr#news {
 			td[class^="wcb-session-2"],
 			td[class*=" wcb-session-2"] {
 				font-size: 0;
+
+				.wcpt-session-title {
+					font-size: 0;
+				}
 			}
 
 			tr {
