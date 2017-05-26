@@ -4853,8 +4853,8 @@ hr#news {
 
 	tbody {
 
-		td[class^="wcpt-session-2"],
-		td[class*=" wcpt-session-2"] {
+		td[class^="wcb-session-2"],
+		td[class*=" wcb-session-2"] {
 			color: #ccc;
 
 			a {
@@ -4871,8 +4871,8 @@ hr#news {
 
 		@media screen and ( min-width: 701px ) {
 
-			td[class^="wcpt-session-2"],
-			td[class*=" wcpt-session-2"] {
+			td[class^="wcb-session-2"],
+			td[class*=" wcb-session-2"] {
 				font-size: 0;
 			}
 
@@ -4892,8 +4892,8 @@ hr#news {
 							border-right-color: #fff;
 						}
 
-						&[class^="wcpt-session-2"],
-						&[class*=" wcpt-session-2"]{
+						&[class^="wcb-session-2"],
+						&[class*=" wcb-session-2"]{
 							background: #fff;
 							border: 1px solid #f6f6f6;
 							border-top-width: 0;
@@ -4905,8 +4905,8 @@ hr#news {
 
 					td {
 
-						&[class^="wcpt-session-2"],
-						&[class*=" wcpt-session-2"]{
+						&[class^="wcb-session-2"],
+						&[class*=" wcb-session-2"]{
 							background: #f6f6f6;
 							border: 1px solid #fff;
 							border-top-width: 0;
