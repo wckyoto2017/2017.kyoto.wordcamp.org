@@ -4853,7 +4853,28 @@ hr#news {
 
 	tbody {
 
+		td[class^="wcpt-session-2"],
+		td[class*=" wcpt-session-2"] {
+			font-size: 0;
+
+			a {
+				background: transparent !important;
+				pointer-events: none;
+				cursor: default;
+
+				&:hover,
+				&:focus {
+					background: transparent !important;
+				}
+			}
+		}
+
 		@media screen and ( min-width: 701px ) {
+
+			td[class^="wcpt-session-2"],
+			td[class*=" wcpt-session-2"] {
+				font-size: 0;
+			}
 
 			tr {
 				border: 0;
@@ -4869,6 +4890,34 @@ hr#news {
 
 						&:not(:last-child) {
 							border-right-color: #fff;
+						}
+
+						&[class^="wcpt-session-2"],
+						&[class*=" wcpt-session-2"]{
+							background: #fff;
+							border: 1px solid #f6f6f6;
+							border-top-width: 0;
+						}
+					}
+				}
+
+				&:nth-child(even) {
+
+					td {
+
+						&[class^="wcpt-session-2"],
+						&[class*=" wcpt-session-2"]{
+							background: #f6f6f6;
+							border: 1px solid #fff;
+							border-top-width: 0;
+
+							&:first-child {
+								border-left-width: 0;
+							}
+
+							&:last-child {
+								border-right-width: 0;
+							}
 						}
 					}
 				}
