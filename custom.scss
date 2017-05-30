@@ -1465,8 +1465,8 @@ a:hover .nav-title,
 /* Fixes linked images */
 .entry-content a img,
 .widget a img {
-	-webkit-box-shadow: 0 0 0 8px #fff;
-	box-shadow: 0 0 0 8px #fff;
+	// -webkit-box-shadow: 0 0 0 8px #fff;
+	// box-shadow: 0 0 0 8px #fff;
 }
 
 .post-navigation a:focus .icon,
@@ -5103,15 +5103,19 @@ h2.widget-title {
 
 	.sponsor-level {
 		overflow: hidden;
+		margin-left: -4px;
+		margin-right: -4px;
 
 		.sponsor-logo {
 			background: #f2f2f2;
+			border: 4px solid #fff;
 			float: left;
 			padding: 0;
 
 			img {
 				background: transparent;
 				max-height: none;
+				vertical-align: top;
 			}
 		}
 
@@ -5150,6 +5154,7 @@ h2.widget-title {
 .sponsor-level-title {
 	font-family: 'Roboto', sans-serif;
 	margin-top: 3em;
+	padding: 0 4px;
 	text-transform: uppercase;
 }
 
