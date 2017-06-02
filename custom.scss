@@ -4820,6 +4820,7 @@ hr#news {
 	}
 }
 
+// Hide duplication of the sticky welcome post
 .blog.paged {
 
 	#post-3 {
@@ -4827,6 +4828,13 @@ hr#news {
 	}
 }
 
+// Hide the previous link to the sticky welcome post
+.postid-384 {
+
+	.nav-previous {
+		display: none;
+	}
+}
 
 /*--------------------------------------------------------------
 21.2 Timetable
