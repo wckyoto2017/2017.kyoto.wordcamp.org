@@ -4837,7 +4837,7 @@ hr#news {
 }
 
 /*--------------------------------------------------------------
-21.2 Timetable
+21.1 Timetable
 --------------------------------------------------------------*/
 @media screen and ( min-width: 1360px ) {
 
@@ -4875,8 +4875,8 @@ hr#news {
 			color: #ccc;
 
 			a {
-				cursor: default;
 				background: transparent !important;
+				cursor: default;
 				pointer-events: none;
 
 				&:hover,
@@ -5050,14 +5050,14 @@ hr#news {
 }
 
 /*--------------------------------------------------------------
-21.3 Session
+21.2 Session
 --------------------------------------------------------------*/
 #session-speaker-names {
 	padding-left: 0;
 }
 
 /*--------------------------------------------------------------
-21.4 Sponsor
+21.3 Sponsor
 --------------------------------------------------------------*/
 .single-wcb_sponsor {
 
@@ -5066,9 +5066,6 @@ hr#news {
 	}
 }
 
-/*--------------------------------------------------------------
-21.4 Sponsor
---------------------------------------------------------------*/
 .widget-area {
 	margin: auto;
 	max-width: 640px;
@@ -5181,4 +5178,47 @@ html[lang="ja"] {
 	.sponsor-level-title {
 		font-family: 'Roboto', sans-serif;
 	}
+}
+
+/*--------------------------------------------------------------
+21.4 Organizers
+--------------------------------------------------------------*/
+.wcorg-organizers {
+	// margin-left: -20px;
+	// margin-right: -20px;
+
+	> .wcorg-organizer {
+		border: 2px solid #333;
+		margin-bottom: 20px;
+		padding-bottom: 10px !important;
+		position: relative;
+		width: 100% !important;
+
+		@media screen and ( min-width: 682px ) {
+			width: 310px !important;
+
+			&:nth-child(odd) {
+				margin-right: 20px;
+			}
+		}
+
+		> h2 {
+			margin: 150px 0 30px;
+			text-align: center;
+		}
+
+		.avatar {
+			border-radius: 50%;
+			cursor: default;
+			display: block;
+			left: 0;
+			margin: 0 auto;
+			overflow: hidden;
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+			top: 40px;
+		}
+	}
+
 }
