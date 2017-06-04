@@ -5062,8 +5062,7 @@ hr#news {
 .entry-content {
 
 	.speaker-avatar {
-		float: left;
-		margin: 0 20px 20px 0;
+		margin-bottom: 20px;
 
 		img {
 			border-radius: 50%;
@@ -5072,10 +5071,6 @@ hr#news {
 			pointer-events: none;
 			vertical-align: top;
 		}
-	}
-
-	.speaker-sessions {
-		clear: both;
 	}
 }
 
