@@ -5059,6 +5059,26 @@ hr#news {
 /*--------------------------------------------------------------
 21.3 Speaker
 --------------------------------------------------------------*/
+.entry-content {
+
+	.speaker-avatar {
+		float: left;
+		margin: 0 20px 20px 0;
+
+		img {
+			border-radius: 50%;
+			cursor: default;
+			overflow: hidden;
+			pointer-events: none;
+			vertical-align: top;
+		}
+	}
+
+	.speaker-sessions {
+		clear: both;
+	}
+}
+
 #speaker-session-names {
 
 	> li {
@@ -5070,7 +5090,7 @@ hr#news {
 }
 
 /*--------------------------------------------------------------
-21.3 Sponsor
+21.4 Sponsor
 --------------------------------------------------------------*/
 .single-wcb_sponsor {
 
@@ -5194,7 +5214,7 @@ html[lang="ja"] {
 }
 
 /*--------------------------------------------------------------
-21.4 Organizers
+21.5 Organizers
 --------------------------------------------------------------*/
 .wcorg-organizers {
 	// margin-left: -20px;
