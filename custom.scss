@@ -593,7 +593,11 @@ code,
 kbd,
 tt,
 var {
+	background: #f2f2f2;
+	border-radius: 2px;
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 0.95em;
+	padding: 0.1em 0.4em;
 	// font-size: 15px;
 	// font-size: 0.9375rem;
 }
